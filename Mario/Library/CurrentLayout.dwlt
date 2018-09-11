@@ -109,7 +109,11 @@ MonoBehaviour:
   m_MinSize: {x: 683, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
+<<<<<<< HEAD
   controlID: 11
+=======
+  controlID: 51
+>>>>>>> origin/Honjo
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -128,12 +132,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 842
+=======
+    width: 1003
+>>>>>>> origin/Honjo
     height: 587
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
+<<<<<<< HEAD
   controlID: 105
+=======
+  controlID: 52
+>>>>>>> origin/Honjo
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -152,12 +164,20 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 842
+=======
+    width: 1003
+>>>>>>> origin/Honjo
     height: 316
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 106
+=======
+  controlID: 53
+>>>>>>> origin/Honjo
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -174,7 +194,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
     width: 303
+=======
+    width: 359
+>>>>>>> origin/Honjo
     height: 316
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
@@ -197,12 +221,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 303
     y: 0
     width: 539
     height: 316
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
+=======
+    x: 359
+    y: 0
+    width: 644
+    height: 316
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/Honjo
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 15}
@@ -228,7 +261,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 316
+<<<<<<< HEAD
     width: 842
+=======
+    width: 1003
+>>>>>>> origin/Honjo
     height: 271
   m_MinSize: {x: 232, y: 271}
   m_MaxSize: {x: 10002, y: 10021}
@@ -252,12 +289,21 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 842
     y: 0
     width: 423
     height: 587
   m_MinSize: {x: 277, y: 71}
   m_MaxSize: {x: 4002, y: 4021}
+=======
+    x: 1003
+    y: 0
+    width: 277
+    height: 587
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
+>>>>>>> origin/Honjo
   m_ActualView: {fileID: 21}
   m_Panes:
   - {fileID: 21}
@@ -283,9 +329,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 851.3334
     y: 99.333336
     width: 421
+=======
+    x: 1005.3334
+    y: 92
+    width: 275
+>>>>>>> origin/Honjo
     height: 566
   m_PersistentViewDataDictionary: {fileID: 0}
   m_InitialOpenURL: https://public-cdn.cloud.unity3d.com/editor/production/cloud/hub
@@ -314,9 +366,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 312.6667
     y: 99.333336
     width: 535
+=======
+    x: 361.33334
+    y: 92
+    width: 640
+>>>>>>> origin/Honjo
     height: 295
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
@@ -350,25 +408,43 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
+<<<<<<< HEAD
       width: 535
       height: 278
     m_Scale: {x: 1.5, y: 1.5}
     m_Translation: {x: 267.5, y: 139}
+=======
+      width: 640
+      height: 278
+    m_Scale: {x: 1.1849563, y: 1}
+    m_Translation: {x: 320, y: 139}
+>>>>>>> origin/Honjo
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
+<<<<<<< HEAD
       x: -178.33333
       y: -92.666664
       width: 356.66666
       height: 185.33333
+=======
+      x: -270.05215
+      y: -139
+      width: 540.1043
+      height: 278
+>>>>>>> origin/Honjo
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
   m_CurrentColorSpace: 0
+<<<<<<< HEAD
   m_LastWindowPixelSize: {x: 802.5, y: 442.5}
+=======
+  m_LastWindowPixelSize: {x: 960, y: 442.5}
+>>>>>>> origin/Honjo
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000100
@@ -393,35 +469,49 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.3333335
     y: 99.333336
     width: 301
+=======
+    x: 0
+    y: 92
+    width: 357
+>>>>>>> origin/Honjo
     height: 295
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: e6fbffff00000000
+=======
+    m_ExpandedIDs: dafbffff00000000
+>>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: 
-      m_OriginalName: 
+      m_Name: New Sprite
+      m_OriginalName: New Sprite
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 0
+      m_UserData: -1636
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 11
+      m_OriginalEventType: 0
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 8}
     m_SearchString: 
   m_ExpandedScenes:
+<<<<<<< HEAD
   - Yamamoto_test
+=======
+  - GameScene
+>>>>>>> origin/Honjo
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -600,7 +690,7 @@ MonoBehaviour:
   m_AnimEditor: {fileID: 0}
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 0
+  m_LastSelectedObjectID: -1636
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -621,9 +711,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 7.3333335
     y: 415.33334
     width: 840
+=======
+    x: 0
+    y: 408
+    width: 1001
+>>>>>>> origin/Honjo
     height: 250
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
@@ -638,20 +734,36 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
+<<<<<<< HEAD
     - Assets/YamamotoBOX
+=======
+    - Assets/Scripts
+>>>>>>> origin/Honjo
   m_ViewMode: 1
-  m_StartGridSize: 64
+  m_StartGridSize: 78
   m_LastFolders:
+<<<<<<< HEAD
   - Assets/YamamotoBOX
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\Mario\Mario
+=======
+  - Assets/Scripts
+  m_LastFoldersGridSize: 78
+  m_LastProjectPath: C:\Users\user\Documents\Mario\Mario
+>>>>>>> origin/Honjo
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: e2090000
     m_LastClickedID: 2530
     m_ExpandedIDs: 000000004a090000a20900005a0b0000
+=======
+    m_SelectedIDs: d8090000
+    m_LastClickedID: 2520
+    m_ExpandedIDs: 000000001c070000580900005e090000b2090000d2090000d4090000e0090000f8090000320a00007c0a0000980a0000ce0a00005e0b0000b40b000000ca9a3b
+>>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -679,7 +791,11 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
+<<<<<<< HEAD
     m_ExpandedIDs: 000000004a090000a20900005a0b0000
+=======
+    m_ExpandedIDs: 00000000
+>>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -707,7 +823,7 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 761c0000e204000058cbffffe805000064f5fffffe05000094050000320600000000000006060000d2050000
+    m_ExpandedInstanceIDs: 761c0000e204000058cbffffe805000064f5fffffe050000940500003206000006060000d205000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -732,8 +848,8 @@ MonoBehaviour:
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
     m_ScrollPosition: {x: 0, y: 0}
-    m_GridSize: 64
-  m_DirectoriesAreaWidth: 110
+    m_GridSize: 78
+  m_DirectoriesAreaWidth: 215
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -779,9 +895,15 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
+<<<<<<< HEAD
     x: 851.3334
     y: 99.333336
     width: 421
+=======
+    x: 1005.3334
+    y: 92
+    width: 275
+>>>>>>> origin/Honjo
     height: 566
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
