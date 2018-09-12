@@ -4,20 +4,18 @@ using UnityEngine;
 
 public class TianjinMeal : MonoBehaviour
 {
+    //State state;
+    public PlayerController playerController;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("天津飯");
+            //state.SetTenshinhan();//天津飯
+            playerController.SetTenshinhan();//天津飯
             Destroy(gameObject);
         }
     }
     /*
-    PlayerController
-    void SetTenshinhan()
-    {
-
-    }
 	// Use this for initialization
 	void Start () 
     {		

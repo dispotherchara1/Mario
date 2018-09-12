@@ -56,10 +56,13 @@
      <Compile Include="Assets\Scripts\Items\FriedRice.cs" />
      <Compile Include="Assets\Scripts\Items\Ramen.cs" />
      <Compile Include="Assets\Scripts\Items\TianjinMeal.cs" />
-     <Compile Include="Assets\Scripts\ModeType.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\Scripts\slime.cs" />
+<<<<<<< HEAD
      <Compile Include="Assets\YamamotoBOX\motin.cs" />
+=======
+     <Compile Include="Assets\Scripts\State.cs" />
+>>>>>>> origin/Honjo
  <Reference Include="UnityEditor.StandardEvents">
  <HintPath>C:/Users/user/Desktop/Mario/Mario/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
