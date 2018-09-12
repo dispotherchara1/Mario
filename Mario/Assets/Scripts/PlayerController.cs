@@ -10,6 +10,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     Rigidbody2D rb2d;
     bool jump = false;
 
+    enum ModeType
+    {
+        normal, tensinhan, ramen
+    };
+    ModeType modetype;
+
     enum AttackType//攻撃パターン
     {
         panchi, syoryuken , hadoken
@@ -21,6 +27,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
+        
     }
 
     // Update is called once per frame
@@ -61,14 +68,16 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (Input.GetKeyDown(KeyCode.Z))//パンチ
         {
-            //未定(モーション)
-            Debug.Log("パンチ");
-        }
-        if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)
-                 && Input.GetKeyDown(KeyCode.Z))//昇竜拳
-        {
-            //未定(モーション)
-            Debug.Log("昇竜拳");
+            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
+            {
+                //未定(モーション)
+                Debug.Log("昇竜拳");
+            }
+            else
+            {
+                //未定(モーション)
+                Debug.Log("パンチ");
+            }
         }
         if (Input.GetKeyDown(KeyCode.Space))//波動拳
         {

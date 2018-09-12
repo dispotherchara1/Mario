@@ -2,7 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+<<<<<<< HEAD
 public class OnTriggerEnter2D : MonoBehaviour {
+=======
+public class slime : MonoBehaviour {
+>>>>>>> origin/Honjo
     public float a;
 	// Use this for initialization
 	void Start () {
@@ -14,6 +18,7 @@ public class OnTriggerEnter2D : MonoBehaviour {
         Transform mytransform = this.transform;
 
         Vector3 pos = mytransform.position;
+<<<<<<< HEAD
         pos.x -= a;
 
         mytransform.position = pos;
@@ -22,4 +27,10 @@ public class OnTriggerEnter2D : MonoBehaviour {
     {
 
     }
+=======
+        pos.x += a;
+
+        mytransform.position = pos;
+	}
+>>>>>>> origin/Honjo
 }
