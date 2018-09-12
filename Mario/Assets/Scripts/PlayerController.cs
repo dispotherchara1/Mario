@@ -3,31 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
+    State state;
     //変数定義
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
     Rigidbody2D rb2d;
-    bool jump = false;
+    bool jump;
 
-    enum ModeType
+    enum AttackType//攻撃パターン(まだ使ってません)
+    {
+        panchi, syoryuken, hadoken
+    };
+    AttackType attacktype;
+
+    enum StateType
     {
         normal, tenshinhan, ramen
     };
-    ModeType modetype;
-
-    enum AttackType//攻撃パターン
+    StateType stateType;
+    
+    public void SetTenshinhan()
     {
-        panchi, syoryuken , hadoken
-    };
-    AttackType attacktype;
+        if (stateType != StateType.ramen)
+        {
+            Debug.Log("天津飯");
+            stateType = StateType.tenshinhan;
+        }
+        else
+        {
+            Debug.Log("天津飯を食べれません");
+        }
+    }
+
+    public void SetRamen()
+    {
+        Debug.Log("ラーメン");
+        stateType = StateType.ramen;
+    }
 
     // Use this for initialization
     void Start()
     {
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
-        
+        stateType = StateType.normal;
     }
 
     // Update is called once per frame
@@ -66,23 +86,52 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
 
     void Attack()
     {
-        if (Input.GetKeyDown(KeyCode.Z))//パンチ
+        switch (stateType)//状態を確認
         {
-            if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
-            {
-                //未定(モーション)
-                Debug.Log("昇竜拳");
-            }
-            else
-            {
-                //未定(モーション)
-                Debug.Log("パンチ");
-            }
-        }
-        if (Input.GetKeyDown(KeyCode.Space))//波動拳
-        {
-            //未定(モーション)
-            Debug.Log("波動拳");
+            case StateType.normal:
+                if (Input.GetKeyDown(KeyCode.Z))//パンチ
+                {
+                    //未定(モーション)           
+                    Debug.Log("パンチ");
+                }
+                break;
+
+            case StateType.tenshinhan:
+                if (Input.GetKeyDown(KeyCode.Z))//パンチ
+                {
+                    if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
+                    {
+                        //未定(モーション)
+                        Debug.Log("昇竜拳");
+                    }
+                    else
+                    {
+                        //未定(モーション)
+                        Debug.Log("パンチ");
+                    }
+                }
+                break;
+
+            case StateType.ramen:
+                if (Input.GetKeyDown(KeyCode.Z))//パンチ
+                {
+                    if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
+                    {
+                        //未定(モーション)
+                        Debug.Log("昇竜拳");
+                    }
+                    else
+                    {
+                        //未定(モーション)
+                        Debug.Log("パンチ");
+                    }
+                }
+                if (Input.GetKeyDown(KeyCode.Space))//波動拳
+                {
+                    //未定(モーション)
+                    Debug.Log("波動拳");
+                }
+                break;
         }
     }
 

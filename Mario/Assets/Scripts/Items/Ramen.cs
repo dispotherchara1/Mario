@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class Ramen : MonoBehaviour
 {
-
+    //State state;
+    public PlayerController playerController;
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")
         {
-            Debug.Log("ラーメン");
+            //state.SetRamen();//ラーメン
+            playerController.SetRamen();//ラーメン
             Destroy(gameObject);
         }
     }
