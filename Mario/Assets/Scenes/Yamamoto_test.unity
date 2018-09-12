@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 1076429893}
   m_Layer: 0
   m_Name: China_C
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -405,11 +405,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 4.08
+      value: 6.05
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.21
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.z
@@ -434,6 +434,26 @@ Prefab:
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_RootOrder
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 212058410467145926, guid: 50da52836b531934494d9fea82492540,
+        type: 2}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212058410467145926, guid: 50da52836b531934494d9fea82492540,
+        type: 2}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212058410467145926, guid: 50da52836b531934494d9fea82492540,
+        type: 2}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 61606779340121714, guid: 50da52836b531934494d9fea82492540,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50da52836b531934494d9fea82492540, type: 2}
