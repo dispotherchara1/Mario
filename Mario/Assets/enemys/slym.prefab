@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4030093009317210}
   - component: {fileID: 212519729934352326}
   - component: {fileID: 61314391866299714}
+  - component: {fileID: 114212190281034316}
   m_Layer: 0
   m_Name: slym
   m_TagString: Enemy
@@ -51,8 +52,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1702262004996592}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 6.230362, y: -0.13980004, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4419504769383874}
   m_Father: {fileID: 0}
@@ -121,6 +122,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.534885, y: 0.4301532}
   m_EdgeRadius: 0
+--- !u!114 &114212190281034316
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1702262004996592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02c83a6fa4de1f440a8fdb93711508f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  a: 0
 --- !u!212 &212519729934352326
 SpriteRenderer:
   m_ObjectHideFlags: 1

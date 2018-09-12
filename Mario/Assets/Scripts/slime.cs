@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class slime : MonoBehaviour {
+public class OnTriggerEnter2D : MonoBehaviour {
     public float a;
 	// Use this for initialization
 	void Start () {
@@ -14,8 +14,12 @@ public class slime : MonoBehaviour {
         Transform mytransform = this.transform;
 
         Vector3 pos = mytransform.position;
-        pos.x += a;
+        pos.x -= a;
 
         mytransform.position = pos;
 	}
+    private OntriggerEnter2D(Collider2D col)
+    {
+
+    }
 }
