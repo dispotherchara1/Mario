@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
 
     enum ModeType
     {
-        normal, tensinhan, ramen
+        normal, tenshinhan, ramen
     };
     ModeType modetype;
 
