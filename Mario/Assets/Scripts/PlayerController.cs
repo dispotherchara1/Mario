@@ -8,6 +8,8 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public float speed = 5.0f;
     float direction = 0.0f;
     float invincibleTime = 0.0f;//無敵状態
+    float nextTime = 0.0f;
+    float interval = 0.2f;	// 点滅周期
     Rigidbody2D rb2d;
     bool jump;
     bool invincible = false;//無敵
@@ -49,6 +51,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
         stateType = StateType.normal;
+        nextTime = Time.time;
     }
 
     // Update is called once per frame
@@ -56,19 +59,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         Operation();
         Attack();
-
-        if (invincible)
-        {
-            Debug.Log("無敵中です");
-            invincibleTime += Time.deltaTime;
-            if(invincibleTime > 3.02f)
-            {
-                invincible = false;
-                invincibleTime = 0.0f;
-                Debug.Log("無敵が解除されました");
-            }
-        }
-        
+        StateNow();
     }
 
     void Operation()
@@ -146,6 +137,36 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                     Debug.Log("波動拳");
                 }
                 break;
+        }
+    }
+
+    void StateNow()
+    {
+        var renderComponent = GetComponent<Renderer>();
+
+        if (invincible)
+        {
+            Debug.Log("無敵中です");
+            invincibleTime += Time.deltaTime;
+
+            if (Time.time > nextTime)
+            {
+                renderComponent.enabled = !renderComponent.enabled;
+                nextTime += interval;
+            }
+
+            if (invincibleTime > 3.0f)
+            {
+                invincible = false;
+                invincibleTime = 0.0f;
+                nextTime = 0.0f;
+
+                if (!renderComponent.enabled)
+                {
+                    renderComponent.enabled = !renderComponent.enabled;
+                }
+                Debug.Log("無敵が終わりました");
+            }
         }
     }
 
