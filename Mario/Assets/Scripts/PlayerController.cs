@@ -7,8 +7,10 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
+    float invincibleTime = 0.0f;//無敵状態
     Rigidbody2D rb2d;
     bool jump;
+    bool invincible = false;//無敵
 
     enum AttackType//攻撃パターン(まだ使ってません)
     {
@@ -54,6 +56,19 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         Operation();
         Attack();
+
+        if (invincible)
+        {
+            Debug.Log("無敵中です");
+            invincibleTime += Time.deltaTime;
+            if(invincibleTime > 3.02f)
+            {
+                invincible = false;
+                invincibleTime = 0.0f;
+                Debug.Log("無敵が解除されました");
+            }
+        }
+        
     }
 
     void Operation()
@@ -142,20 +157,23 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
 
-    void OnTriggerEnter2D(Collider2D damege)
+    void OnTriggerStay2D(Collider2D damege)
     {
         if (damege.gameObject.CompareTag("Enemy"))
         {
-            if (stateType > 0)
+            if (!invincible)
             {
-                stateType--;
-                Debug.Log("ダメージを受けました" + stateType);
-            }
-            else
-            {
-
-                //ゲームオーバー
-                Debug.Log("ゲームオーバー");
+                if (stateType > 0)
+                {
+                    stateType--;
+                    Debug.Log("ダメージを受けました" + stateType);
+                    invincible = true;
+                }
+                else
+                {
+                    //ゲームオーバー
+                    Debug.Log("ゲームオーバー");
+                }
             }
         }
     }
