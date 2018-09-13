@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
-    State state;
     //変数定義
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
@@ -22,7 +21,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         normal, tenshinhan, ramen
     };
     StateType stateType;
-    
+
     public void SetTenshinhan()
     {
         if (stateType != StateType.ramen)
@@ -140,6 +139,24 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         if (other.gameObject.CompareTag("Ground"))
         {
             jump = false;
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D damege)
+    {
+        if (damege.gameObject.CompareTag("Enemy"))
+        {
+            if (stateType > 0)
+            {
+                stateType--;
+                Debug.Log("ダメージを受けました" + stateType);
+            }
+            else
+            {
+
+                //ゲームオーバー
+                Debug.Log("ゲームオーバー");
+            }
         }
     }
 }
