@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class State : MonoBehaviour
+public class State : MonoBehaviour//今は使っていません
 {
     /*
     enum StateType

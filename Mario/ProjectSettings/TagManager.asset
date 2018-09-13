@@ -4,9 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Enemy
   - Enemydamage
   - SearchEnemy
+=======
+  - Ground
+  - Enemy
+  - Enemydamage
+>>>>>>> origin/Honjo
   layers:
   - Default
   - TransparentFX

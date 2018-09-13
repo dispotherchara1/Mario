@@ -3,13 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
-    State state;
     //変数定義
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
+    float invincibleTime = 0.0f;//無敵状態
+    float nextTime = 0.0f;
+    float interval = 0.2f;	// 点滅周期
     Rigidbody2D rb2d;
     bool jump;
+    bool invincible = false;//無敵
 
     enum AttackType//攻撃パターン(まだ使ってません)
     {
@@ -22,7 +25,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         normal, tenshinhan, ramen
     };
     StateType stateType;
-    
+
     public void SetTenshinhan()
     {
         if (stateType != StateType.ramen)
@@ -48,6 +51,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
         stateType = StateType.normal;
+        nextTime = Time.time;
     }
 
     // Update is called once per frame
@@ -55,6 +59,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         Operation();
         Attack();
+        StateNow();
     }
 
     void Operation()
@@ -135,11 +140,62 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
 
+    void StateNow()
+    {
+        var renderComponent = GetComponent<Renderer>();
+
+        if (invincible)
+        {
+            Debug.Log("無敵中です");
+            invincibleTime += Time.deltaTime;
+
+            if (Time.time > nextTime)
+            {
+                renderComponent.enabled = !renderComponent.enabled;
+                nextTime += interval;
+            }
+
+            if (invincibleTime > 3.0f)
+            {
+                invincible = false;
+                invincibleTime = 0.0f;
+                nextTime = 0.0f;
+
+                if (!renderComponent.enabled)
+                {
+                    renderComponent.enabled = !renderComponent.enabled;
+                }
+                Debug.Log("無敵が終わりました");
+            }
+        }
+    }
+
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
             jump = false;
+        }
+    }
+
+    void OnTriggerStay2D(Collider2D damege)
+    {
+        if (damege.gameObject.CompareTag("Enemy"))
+        {
+            if (!invincible)
+            {
+                if (stateType > 0)
+                {
+                    stateType--;
+                    Debug.Log("ダメージを受けました" + stateType);
+                    invincible = true;
+                }
+                else
+                {
+                    //ゲームオーバー
+                    Debug.Log("ゲームオーバー");
+                }
+            }
         }
     }
 }
