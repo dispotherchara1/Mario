@@ -395,6 +395,7 @@ GameObject:
   - component: {fileID: 674747619}
   - component: {fileID: 674747620}
   - component: {fileID: 674747621}
+  - component: {fileID: 674747622}
   m_Layer: 0
   m_Name: Bousi
   m_TagString: Untagged
@@ -470,6 +471,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 60ecd9961fef18e458eacbfa307fb5d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blinker: {fileID: 674747622}
+  playerController: {fileID: 909830330}
+  state: {fileID: 909830336}
+--- !u!114 &674747622
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674747618}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 484c33924494f2343ad2e84b72fe06ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &909830329
