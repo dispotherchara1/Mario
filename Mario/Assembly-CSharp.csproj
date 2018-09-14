@@ -57,6 +57,7 @@
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Items\Boushi.cs" />
      <Compile Include="Assets\Scripts\Items\FriedRice.cs" />
+     <Compile Include="Assets\Scripts\Items\Glove.cs" />
      <Compile Include="Assets\Scripts\Items\Ramen.cs" />
      <Compile Include="Assets\Scripts\Items\TianjinMeal.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />

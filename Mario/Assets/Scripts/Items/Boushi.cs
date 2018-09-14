@@ -14,7 +14,7 @@ public class Boushi : MonoBehaviour
 
         if (state.GetBoushiLook())
         {
-            if (playerController.GetBoushi())
+            if (playerController.GetGlove())
             {
                 blinker.SetBlinker();
             }

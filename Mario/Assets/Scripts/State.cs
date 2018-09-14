@@ -4,6 +4,7 @@ using UnityEngine;
 public class State : MonoBehaviour
 {
     bool boushiLook = false;
+    bool gloveLook = false;
 
     enum StateType
     {
@@ -15,6 +16,12 @@ public class State : MonoBehaviour
     {
         return boushiLook;
     }
+
+    public bool GetGloveLook()
+    {
+        return gloveLook;
+    }
+
     public int GetStateInt()//intに変換してreturnで返しています
     {
         return (int)stateType;
@@ -56,7 +63,8 @@ public class State : MonoBehaviour
         {
             case StateType.NORMAL:
                 boushiLook = false;
-                this.transform.localScale = new Vector3(1, 1, 1);
+                gloveLook = false;
+                //this.transform.localScale = new Vector3(1, 1, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     //未定(モーション)           
@@ -65,8 +73,9 @@ public class State : MonoBehaviour
                 break;
 
             case StateType.TENSHINHAN:
-                boushiLook = false;
-                this.transform.localScale = new Vector3(2, 2, 1);
+                boushiLook = true;
+                gloveLook = false;
+                //this.transform.localScale = new Vector3(2, 2, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
@@ -84,7 +93,8 @@ public class State : MonoBehaviour
 
             case StateType.RAMEN:
                 boushiLook = true;
-                this.transform.localScale = new Vector3(2, 2, 1);
+                gloveLook = true;
+                //this.transform.localScale = new Vector3(2, 2, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
