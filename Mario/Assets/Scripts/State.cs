@@ -9,6 +9,11 @@ public class State : MonoBehaviour//今は使っていません
     };
     StateType stateType;
 
+    public int GetStateint()//intに変換してreturnで返しています
+    {
+        return (int)stateType;
+    }
+
     public void SetNormal()
     {
         stateType = StateType.NORMAL;
@@ -83,6 +88,7 @@ public class State : MonoBehaviour//今は使っていません
                 break;
         }
     }    
+
 
     public void GetDamage()
     {

@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class Boushi : MonoBehaviour
 {
-    //public Blinker bilnker;
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
+    public Blinker blinker;
+    public PlayerController playerController;
+    public State state;
 	// Update is called once per frame
-	void Update () {
-		
+	void Update ()
+    {
+        var renderComponent = GetComponent<Renderer>();
+
+        if (state.GetStateint() > 0)
+        {
+            if (playerController.GetBoushi())
+            {
+                blinker.SetBlinker();
+            }
+            else
+            {
+                blinker.SetEnabled();
+            }
+        }
+        else
+        {
+            renderComponent.enabled = false;
+        }
 	}
 }

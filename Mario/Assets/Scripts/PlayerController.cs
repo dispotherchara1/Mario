@@ -68,6 +68,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (invincible)
         {
+            boushi = true;
             blinker.SetBlinker();
             Debug.Log("無敵中です");
             invincibleTime += Time.deltaTime; 
@@ -75,11 +76,17 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             if (invincibleTime > 3.0f)
             {
                 invincible = false;
+                boushi = false;
                 invincibleTime = 0.0f;
                 blinker.SetEnabled();
                 Debug.Log("無敵が終わりました");
             }
         }
+    }
+
+    public bool GetBoushi()
+    {
+        return boushi;
     }
 
     void OnCollisionEnter2D(Collision2D other)
