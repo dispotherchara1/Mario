@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Yamamoto_test.unity
+- path: Assets/Scenes/T.M.test.unity
   isLoaded: 1
   isActive: 1
