@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     bool jump = true;
     bool invincible = false;//無敵
     bool boushi = false;
+    bool glove = false;
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
@@ -20,7 +21,18 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         PANCHI, SYORYUKEN, HADOKEN
     };
-    AttackType attacktype;    
+    AttackType attacktype;
+
+    public bool GetBoushi()
+    {
+        return boushi;
+    }
+
+    public bool GetGlove()
+    {
+        return glove;
+    }
+
 
     // Use this for initialization
     void Start()
@@ -87,12 +99,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
-
-    public bool GetBoushi()
-    {
-        return boushi;
-    }
-
+    
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))

@@ -2,19 +2,20 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Boushi : MonoBehaviour
+public class Glove : MonoBehaviour
 {
+
     public Blinker blinker;
     public PlayerController playerController;
     public State state;
-	// Update is called once per frame
-	void Update ()
+    // Update is called once per frame
+    void Update()
     {
         var renderComponent = GetComponent<Renderer>();
 
         if (state.GetBoushiLook())
         {
-            if (playerController.GetGlove())
+            if (playerController.GetBoushi())
             {
                 blinker.SetBlinker();
             }
@@ -27,5 +28,5 @@ public class Boushi : MonoBehaviour
         {
             renderComponent.enabled = false;
         }
-	}
+    }
 }
