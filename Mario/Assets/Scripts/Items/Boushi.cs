@@ -12,7 +12,7 @@ public class Boushi : MonoBehaviour
     {
         var renderComponent = GetComponent<Renderer>();
 
-        if (state.GetStateint() > 0)
+        if (state.GetBoushiLook())
         {
             if (playerController.GetBoushi())
             {

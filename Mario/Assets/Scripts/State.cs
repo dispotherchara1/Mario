@@ -3,15 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 public class State : MonoBehaviour//今は使っていません
 {
+    bool boushiLook = false;
+
     enum StateType
     {
         NORMAL, TENSHINHAN, RAMEN
     };
     StateType stateType;
 
-    public int GetStateint()//intに変換してreturnで返しています
+    public bool GetBoushiLook()
     {
-        return (int)stateType;
+        return boushiLook;
     }
 
     public void SetNormal()
@@ -43,6 +45,8 @@ public class State : MonoBehaviour//今は使っていません
         switch (stateType)//状態を確認
         {
             case StateType.NORMAL:
+                boushiLook = false;
+                this.transform.localScale = new Vector3(1, 1, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     //未定(モーション)           
@@ -51,6 +55,8 @@ public class State : MonoBehaviour//今は使っていません
                 break;
 
             case StateType.TENSHINHAN:
+                boushiLook = false;
+                this.transform.localScale = new Vector3(2, 2, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
@@ -67,6 +73,8 @@ public class State : MonoBehaviour//今は使っていません
                 break;
 
             case StateType.RAMEN:
+                boushiLook = true;
+                this.transform.localScale = new Vector3(2, 2, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
@@ -88,8 +96,7 @@ public class State : MonoBehaviour//今は使っていません
                 break;
         }
     }    
-
-
+    
     public void GetDamage()
     {
         if (stateType > 0)
@@ -104,3 +111,9 @@ public class State : MonoBehaviour//今は使っていません
         }
     }
 }
+/*
+    public int GetStateInt()//intに変換してreturnで返しています
+    {
+        return (int)stateType;
+    }
+*/
