@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-public class State : MonoBehaviour//今は使っていません
+public class State : MonoBehaviour
 {
     bool boushiLook = false;
 
@@ -14,6 +14,16 @@ public class State : MonoBehaviour//今は使っていません
     public bool GetBoushiLook()
     {
         return boushiLook;
+    }
+    public int GetStateInt()//intに変換してreturnで返しています
+    {
+        return (int)stateType;
+    }
+
+    public void GetDamage()
+    {
+        stateType--;
+        Debug.Log("ダメージを受けました" + stateType);
     }
 
     public void SetNormal()
@@ -96,7 +106,8 @@ public class State : MonoBehaviour//今は使っていません
                 break;
         }
     }    
-    
+
+    /*
     public void GetDamage()
     {
         if (stateType > 0)
@@ -106,14 +117,9 @@ public class State : MonoBehaviour//今は使っていません
         }
         else
         {
-            //ゲームオーバー
+            gameOver.SetGameOver();
             Debug.Log("ゲームオーバー");
         }
     }
+    */
 }
-/*
-    public int GetStateInt()//intに変換してreturnで返しています
-    {
-        return (int)stateType;
-    }
-*/
