@@ -5,6 +5,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
 {
     public Blinker blinker;
     public State state;
+    public GameOver gameOver;
     Rigidbody2D rb2d;
     //変数定義
     bool jump = true;
@@ -39,28 +40,31 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
 
     void Operation()
     {
-        //キーボード操作
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        if (!gameOver.GetGameOver())
         {
-            direction = 1.0f;
-        }
-        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            direction = -1.0f;
-        }
-        else
-        {
-            direction = 0.0f;
-        }
+            //キーボード操作
+            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            {
+                direction = 1.0f;
+            }
+            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+            {
+                direction = -1.0f;
+            }
+            else
+            {
+                direction = 0.0f;
+            }
 
-        //キャラのy軸のdirection方向にspeedの力をかける
-        rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
+            //キャラのy軸のdirection方向にspeedの力をかける
+            rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
-        //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X) && !jump)
-        {
-            rb2d.AddForce(Vector2.up * jumpPower);
-            jump = true;
+            //ジャンプ判定
+            if (Input.GetKeyDown(KeyCode.X) && !jump)
+            {
+                rb2d.AddForce(Vector2.up * jumpPower);
+                jump = true;
+            }
         }
     }    
 
@@ -103,21 +107,17 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         {
             if (!invincible)
             {
-                invincible = true;
-                state.GetDamage();
-                /*
-                if (stateType > 0)
-                {
-                    stateType--;
-                    Debug.Log("ダメージを受けました" + stateType);
+                if(state.GetStateInt() > 0)
+                { 
                     invincible = true;
+                    state.GetDamage();
+                    //state.GetDamage();
                 }
                 else
                 {
-                    //ゲームオーバー
+                    gameOver.SetGameOver();
                     Debug.Log("ゲームオーバー");
                 }
-                */
             }
         }
     }
