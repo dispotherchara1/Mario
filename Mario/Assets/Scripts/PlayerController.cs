@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         return glove;
     }
 
-
     // Use this for initialization
     void Start()
     {
