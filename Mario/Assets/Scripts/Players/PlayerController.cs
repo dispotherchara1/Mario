@@ -7,11 +7,10 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public State state;
     public GameOver gameOver;
     Rigidbody2D rb2d;
+    Renderer renderComponent;
     //変数定義
     //bool jump = true;
     bool invincible = false;//無敵
-    bool boushi = false;
-    bool glove = false;
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
@@ -23,23 +22,19 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         PANCHI, SYORYUKEN, HADOKEN
     };
     AttackType attacktype;
-
-    public bool GetBoushi()
-    {
-        return boushi;
-    }
-
-    public bool GetGlove()
-    {
-        return glove;
-    }
     
+    public bool GetInvincible()
+    {
+        return invincible;
+    }
+
     // Use this for initialization
     void Start()
     {
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
         state.SetNormal();
+        renderComponent = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -50,7 +45,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             Operation();
             state.SetAttack();
             StateNow();
-            Debug.Log(x);
         }
         else
         {
@@ -90,17 +84,15 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (invincible)
         {
-            boushi = true;
-            blinker.SetBlinker();
+            blinker.SetBlinker(renderComponent);
             Debug.Log("無敵中です");
             invincibleTime += Time.deltaTime; 
 
             if (invincibleTime > 3.0f)
             {
                 invincible = false;
-                boushi = false;
                 invincibleTime = 0.0f;
-                blinker.SetEnabled();
+                blinker.SetEnabled(renderComponent);
                 Debug.Log("無敵が終わりました");
             }
         }
@@ -110,7 +102,10 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            x++;
+            if (x < 1)//１　or　０
+            {
+                x++;
+            }
             //jump = false;
         }
     }

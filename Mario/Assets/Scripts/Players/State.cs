@@ -8,7 +8,6 @@ public class State : MonoBehaviour
     bool gloveLook = false;
     float time = 0.0f;
     float timeInterval = 1.0f;
-    
 
     void Start()
     {
