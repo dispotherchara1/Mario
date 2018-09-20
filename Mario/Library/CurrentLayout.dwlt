@@ -46,9 +46,13 @@ MonoBehaviour:
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 87
 =======
   controlID: 84
+>>>>>>> origin/Honjo
+=======
+  controlID: 9
 >>>>>>> origin/Honjo
 --- !u!114 &3
 MonoBehaviour:
@@ -100,8 +104,8 @@ MonoBehaviour:
 =======
     width: 248
     height: 316
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 15}
 >>>>>>> origin/Honjo
   m_Panes:
@@ -163,8 +167,13 @@ MonoBehaviour:
     x: 0
     y: 0
     width: 1280
+<<<<<<< HEAD
     height: 677
   m_MinSize: {x: 950, y: 300}
+=======
+    height: 637
+  m_MinSize: {x: 950, y: 392}
+>>>>>>> origin/Honjo
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
 MonoBehaviour:
@@ -231,9 +240,13 @@ MonoBehaviour:
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 88
 =======
   controlID: 85
+>>>>>>> origin/Honjo
+=======
+  controlID: 10
 >>>>>>> origin/Honjo
 --- !u!114 &10
 MonoBehaviour:
@@ -266,7 +279,11 @@ MonoBehaviour:
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
+<<<<<<< HEAD
   controlID: 86
+>>>>>>> origin/Honjo
+=======
+  controlID: 11
 >>>>>>> origin/Honjo
 --- !u!114 &11
 MonoBehaviour:
@@ -293,8 +310,8 @@ MonoBehaviour:
 =======
     width: 755
     height: 316
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 17}
 >>>>>>> origin/Honjo
   m_Panes:
@@ -476,22 +493,26 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 89.72222}
     m_SelectedIDs: e6090000
     m_LastClickedID: 2534
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c0090000c6090000e6090000420a00002a0b0000f80c0000240d0000820d00008a0d000000ca9a3b
+>>>>>>> origin/Honjo
+=======
+    m_ExpandedIDs: 00000000c8090000ce090000ee0900004a0a0000320b0000000d00002c0d00008a0d0000920d0000
 >>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: ChnesePic
-      m_OriginalName: ChnesePic
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 2844
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
@@ -506,9 +527,13 @@ MonoBehaviour:
     m_SelectedIDs: 
     m_LastClickedID: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000c0090000c6090000e6090000400a00002c0b0000fe0c00002c0d00008e0d0000960d0000
 =======
     m_ExpandedIDs: 00000000c0090000c6090000e6090000420a00002a0b0000f80c0000240d0000820d00008a0d0000
+>>>>>>> origin/Honjo
+=======
+    m_ExpandedIDs: 00000000c8090000ce090000ee0900004a0a0000320b0000000d00002c0d00008a0d0000920d0000
 >>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -630,9 +655,15 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
+<<<<<<< HEAD
     m_SelectedIDs: 420c0000
     m_LastClickedID: 0
     m_ExpandedIDs: 24f1ffff64f3ffff4cf6ffffe6fbffff00000000d42f0000
+=======
+    m_SelectedIDs: 860e0000
+    m_LastClickedID: 3718
+    m_ExpandedIDs: d4fbffff00000000
+>>>>>>> origin/Honjo
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
