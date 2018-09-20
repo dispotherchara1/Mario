@@ -21,7 +21,7 @@ public class Glove : MonoBehaviour
         {
             if (playerController.GetInvincible())
             {
-                blinker.SetBlinker(renderComponent);
+                blinker.SetBlinker_B(renderComponent);
             }
             else
             {

@@ -4,31 +4,52 @@ using UnityEngine;
 
 public class Blinker : MonoBehaviour
 {
-    float nextTime = 0.0f;
+    float nextTime_P = 0.0f;
+    float nextTime_B = 0.0f;
+    float nextTime_G = 0.0f;
     float interval = 0.3f;  // 点滅周期
     
     // Use this for initialization
     void Start()
     {
-        nextTime = Time.time;
+        nextTime_P = Time.time;
+        nextTime_B = Time.time;
+        nextTime_G = Time.time;
     }
-    
-    public void SetBlinker(Renderer renderComponent)
+
+    public void SetBlinker_P(Renderer renderComponent)
     {
-        if(Time.time > nextTime)
+        if (Time.time > nextTime_P)
         {
             renderComponent.enabled = !renderComponent.enabled;
-            nextTime += interval;
+            nextTime_P += interval;
+        }
+    }
+    public void SetBlinker_B(Renderer renderComponent)
+    {
+        if (Time.time > nextTime_B)
+        {
+            renderComponent.enabled = !renderComponent.enabled;
+            nextTime_B += interval;
+        }
+    }
+    public void SetBlinker_G(Renderer renderComponent)
+    {
+        if (Time.time > nextTime_G)
+        {
+            renderComponent.enabled = !renderComponent.enabled;
+            nextTime_G += interval;
         }
     }
 
     public void SetEnabled(Renderer renderComponent)
     {
-        nextTime = 0.0f;
+        nextTime_P = 0.0f;
+        nextTime_B = 0.0f;
+        nextTime_G = 0.0f;
         if (!renderComponent.enabled)
         {
             renderComponent.enabled = !renderComponent.enabled;
-            Debug.Log(nextTime);
         }
     }
 }
