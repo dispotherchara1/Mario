@@ -7,21 +7,25 @@ public class Glove : MonoBehaviour
     public Blinker blinker;
     public PlayerController playerController;
     public State state;
+    Renderer renderComponent;
+
+    void Start()
+    {
+        renderComponent = GetComponent<Renderer>();
+    }
 
     // Update is called once per frame
     void Update()
     {
-        var renderComponent = GetComponent<Renderer>();
-
         if (state.GetBoushiLook())
         {
-            if (playerController.GetBoushi())
+            if (playerController.GetInvincible())
             {
-                blinker.SetBlinker();
+                blinker.SetBlinker(renderComponent);
             }
             else
             {
-                blinker.SetEnabled();
+                blinker.SetEnabled(renderComponent);
             }
         }
         else

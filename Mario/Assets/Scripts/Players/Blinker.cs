@@ -5,32 +5,30 @@ using UnityEngine;
 public class Blinker : MonoBehaviour
 {
     float nextTime = 0.0f;
-    float interval = 0.2f;  // 点滅周期
-
+    float interval = 0.3f;  // 点滅周期
+    
     // Use this for initialization
     void Start()
     {
         nextTime = Time.time;
-    } 
-
-    public void SetBlinker()
+    }
+    
+    public void SetBlinker(Renderer renderComponent)
     {
-        if (Time.time > nextTime)
+        if(Time.time > nextTime)
         {
-            var renderComponent = GetComponent<Renderer>();
             renderComponent.enabled = !renderComponent.enabled;
             nextTime += interval;
         }
     }
 
-    public void SetEnabled()
+    public void SetEnabled(Renderer renderComponent)
     {
-        var renderComponent = GetComponent<Renderer>();
         nextTime = 0.0f;
-
         if (!renderComponent.enabled)
         {
             renderComponent.enabled = !renderComponent.enabled;
+            Debug.Log(nextTime);
         }
     }
 }

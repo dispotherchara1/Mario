@@ -7,25 +7,30 @@ public class Boushi : MonoBehaviour
     public Blinker blinker;
     public PlayerController playerController;
     public State state;
-	// Update is called once per frame
-	void Update ()
-    {
-        var renderComponent = GetComponent<Renderer>();
+    Renderer renderComponent;
 
+    void Start()
+    {
+        renderComponent = GetComponent<Renderer>();
+    }
+    // Update is called once per frame
+    void Update ()
+    {
         if (state.GetBoushiLook())
         {
-            if (playerController.GetGlove())
+            if (playerController.GetInvincible())
             {
-                blinker.SetBlinker();
+                blinker.SetBlinker(renderComponent);
             }
             else
             {
-                blinker.SetEnabled();
+                blinker.SetEnabled(renderComponent);
             }
         }
         else
         {
             renderComponent.enabled = false;
         }
+        Debug.Log(renderComponent.enabled + "");
 	}
 }
