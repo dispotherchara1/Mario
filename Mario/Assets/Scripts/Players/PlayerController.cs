@@ -98,7 +98,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
     
-    void OnCollisionEnter2D(Collision2D other)
+    void OnTriggerEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
