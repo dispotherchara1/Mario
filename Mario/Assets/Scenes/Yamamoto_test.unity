@@ -3405,7 +3405,7 @@ MonoBehaviour:
   blinker: {fileID: 1076429895}
   state: {fileID: 1076429894}
   gameOver: {fileID: 1384494831}
-  jumpPower: 615
+  jumpPower: 580
   speed: 5
 --- !u!95 &1076429897
 Animator:
@@ -3646,11 +3646,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 6.05
+      value: 11.45
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.32
+      value: -0.14
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.z
@@ -3725,6 +3725,14 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 0.051500708
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50da52836b531934494d9fea82492540, type: 2}
@@ -4888,11 +4896,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 3.300449
+      value: 4.13
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.41434693
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4944,11 +4952,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4918212479863180, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50da52836b531934494d9fea82492540, type: 2}
