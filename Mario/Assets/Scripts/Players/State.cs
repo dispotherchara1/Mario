@@ -3,8 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 public class State : MonoBehaviour
 {
+    GameObject hadoken;
     bool boushiLook = false;
     bool gloveLook = false;
+    float time = 0.0f;
+    float timeInterval = 1.0f;
+    
+
+    void Start()
+    {
+        // プレハブをスクリプトのみで取得
+        hadoken = (GameObject)Resources.Load("Prefab/hadokenPre");
+    }
 
     enum StateType
     {
@@ -21,7 +31,7 @@ public class State : MonoBehaviour
     {
         return gloveLook;
     }
-
+    
     public int GetStateInt()//intに変換してreturnで返しています
     {
         return (int)stateType;
@@ -109,10 +119,20 @@ public class State : MonoBehaviour
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.Space))//波動拳
-                {
-                    //未定(モーション)
-                    Debug.Log("波動拳");
+                {     
+                    if(timeInterval < time)
+                    {
+                        //未定(モーション)  
+                        Instantiate(hadoken);
+                        time = 0.0f;
+                        Debug.Log("波動拳");
+                    }
+                    else
+                    {
+                        Debug.Log("クールタイム");
+                    }
                 }
+                time += Time.deltaTime;
                 break;
         }
     }    

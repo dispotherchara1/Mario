@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class Glove : MonoBehaviour
 {
-
     public Blinker blinker;
     public PlayerController playerController;
     public State state;
+
     // Update is called once per frame
     void Update()
     {

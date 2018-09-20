@@ -32,8 +32,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         return glove;
     }
-
-
+    
     // Use this for initialization
     void Start()
     {
@@ -45,38 +44,42 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     // Update is called once per frame
     void Update()
     {
-        Operation();
-        state.SetAttack();
-        StateNow();
+        if (!gameOver.GetGameOver())
+        {
+            Operation();
+            state.SetAttack();
+            StateNow();
+        }
+        else
+        {
+            Debug.Log("ゲームオーバー");
+        }
     }
 
     void Operation()
     {
-        if (!gameOver.GetGameOver())
+        //キーボード操作
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
-            //キーボード操作
-            if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-            {
-                direction = 1.0f;
-            }
-            else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-            {
-                direction = -1.0f;
-            }
-            else
-            {
-                direction = 0.0f;
-            }
+            direction = 1.0f;
+        }
+        else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        {
+            direction = -1.0f;
+        }
+        else
+        {
+            direction = 0.0f;
+        }
+                
+        //キャラのy軸のdirection方向にspeedの力をかける
+        rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
-            //キャラのy軸のdirection方向にspeedの力をかける
-            rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
-
-            //ジャンプ判定
-            if (Input.GetKeyDown(KeyCode.X) && !jump)
-            {
-                rb2d.AddForce(Vector2.up * jumpPower);
-                jump = true;
-            }
+        //ジャンプ判定
+        if (Input.GetKeyDown(KeyCode.X) && !jump)
+        {
+            rb2d.AddForce(Vector2.up * jumpPower);
+            jump = true;
         }
     }    
 
@@ -123,7 +126,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 else
                 {
                     gameOver.SetGameOver();
-                    Debug.Log("ゲームオーバー");
+                    Debug.Log("ゲームオーバーになりました");
                 }
             }
         }
