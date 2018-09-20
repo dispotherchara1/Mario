@@ -17,11 +17,11 @@ public class Glove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (state.GetBoushiLook())
+        if (state.GetGloveLook())
         {
             if (playerController.GetInvincible())
             {
-                blinker.SetBlinker_B(renderComponent);
+                blinker.SetBlinker_G(renderComponent);
             }
             else
             {
