@@ -10,8 +10,7 @@ public class State : MonoBehaviour
     float timeInterval = 1.0f;
 
     void Start()
-    {
-        // プレハブをスクリプトのみで取得
+    {   // プレハブをスクリプトのみで取得
         hadoken = (GameObject)Resources.Load("Prefab/hadokenPre");
     }
 
@@ -19,6 +18,7 @@ public class State : MonoBehaviour
     {
         NORMAL, TENSHINHAN, RAMEN
     };
+
     StateType stateType;
 
     public bool GetBoushiLook()

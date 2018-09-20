@@ -25,4 +25,18 @@ public class Hadoken : MonoBehaviour
             Destroy(gameObject);    // 自分自身を削除
         }
     }
+
+
+    void OnTriggerStay2D(Collider2D col)
+    {
+        if (!col.gameObject.CompareTag("Items"))
+        {
+            Destroy(gameObject);
+            Debug.Log("物に当たりました");
+        }
+        else
+        {
+            Debug.Log("アイテムに当たりました");
+        }
+    }
 }

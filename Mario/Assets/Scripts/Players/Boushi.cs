@@ -20,7 +20,7 @@ public class Boushi : MonoBehaviour
         {
             if (playerController.GetInvincible())
             {
-                blinker.SetBlinker(renderComponent);
+                blinker.SetBlinker_B(renderComponent);
             }
             else
             {
@@ -31,6 +31,5 @@ public class Boushi : MonoBehaviour
         {
             renderComponent.enabled = false;
         }
-        Debug.Log(renderComponent.enabled + "");
 	}
 }

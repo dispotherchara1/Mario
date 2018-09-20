@@ -84,7 +84,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (invincible)
         {
-            blinker.SetBlinker(renderComponent);
+            blinker.SetBlinker_P(renderComponent);
             Debug.Log("無敵中です");
             invincibleTime += Time.deltaTime; 
 
@@ -120,7 +120,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 { 
                     invincible = true;
                     state.GetDamage();
-                    //state.GetDamage();
                 }
                 else
                 {
