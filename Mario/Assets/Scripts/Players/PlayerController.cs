@@ -8,7 +8,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public GameOver gameOver;
     Rigidbody2D rb2d;
     //変数定義
-    bool jump = true;
+    //bool jump = true;
     bool invincible = false;//無敵
     bool boushi = false;
     bool glove = false;
@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public float speed = 5.0f;
     float direction = 0.0f;
     float invincibleTime = 0.0f;//無敵状態
+    int x = 0; 
 
     enum AttackType//攻撃パターン(まだ使ってません)
     {
@@ -49,6 +50,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             Operation();
             state.SetAttack();
             StateNow();
+            Debug.Log(x);
         }
         else
         {
@@ -76,10 +78,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X) && !jump)
+        if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
         {
             rb2d.AddForce(Vector2.up * jumpPower);
-            jump = true;
+            x--;
+            //jump = true;
         }
     }    
 
@@ -107,7 +110,8 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         if (other.gameObject.CompareTag("Ground"))
         {
-            jump = false;
+            x++;
+            //jump = false;
         }
     }
 
