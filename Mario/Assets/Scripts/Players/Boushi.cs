@@ -31,6 +31,5 @@ public class Boushi : MonoBehaviour
         {
             renderComponent.enabled = false;
         }
-        Debug.Log(renderComponent.enabled + "");
 	}
 }

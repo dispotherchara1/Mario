@@ -120,7 +120,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 { 
                     invincible = true;
                     state.GetDamage();
-                    //state.GetDamage();
                 }
                 else
                 {
