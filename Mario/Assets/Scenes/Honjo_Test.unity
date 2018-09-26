@@ -602,6 +602,7 @@ MonoBehaviour:
   gameOver: {fileID: 2070027555}
   jumpPower: 300
   speed: 5
+  x: 0
 --- !u!212 &909830331
 SpriteRenderer:
   m_ObjectHideFlags: 0

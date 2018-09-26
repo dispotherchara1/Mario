@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public float speed = 5.0f;
     float direction = 0.0f;
     float invincibleTime = 0.0f;//無敵状態
-    int x = 0; 
+    public int x = 0; 
 
     enum AttackType//攻撃パターン(まだ使ってません)
     {
@@ -72,12 +72,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
+        //if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
         if (Input.GetKeyDown(KeyCode.X))//jump)
         {
             if (x >= 1)
             {
                 rb2d.AddForce(Vector2.up * jumpPower);
-                x--;
                 //jump = true;
             }
         }
@@ -101,7 +101,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
     
-    /*
+/*
     void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -115,18 +115,24 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     }
     */
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
-        {
-            if (x < 1)//１　or　０
-            {
-                x++;
-            }
-            //jump = false;
-            Debug.Log("地面に当たっています");
-        }
+    //void OnTriggerEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.tag==("Ground"))//.gameObject.CompareTag("Ground"))
+    //    {
+    //        if (x < 1)//１　or　０
+    //        {
+    //            x++;
+    //        }
+    //        //jump = false;
+    //    }
+    //    else
+    //    {
+    //        x = 0;
+    //    }
+    //}
 
+    void OnTriggerStay2D(Collider2D other)
+    {
         if (other.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
@@ -143,6 +149,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 }
             }
         }
+
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            x = 1;
+        }
+        else { x = 0; }
     }
 
 }
