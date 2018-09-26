@@ -101,7 +101,8 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
     
-    void OnTriggerEnter2D(Collision2D other)
+    /*
+    void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
         {
@@ -112,10 +113,21 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             //jump = false;
         }
     }
+    */
 
-    void OnTriggerEnter2D(Collider2D damage)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (damage.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            if (x < 1)//１　or　０
+            {
+                x++;
+            }
+            //jump = false;
+            Debug.Log("地面に当たっています");
+        }
+
+        if (other.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
             {
