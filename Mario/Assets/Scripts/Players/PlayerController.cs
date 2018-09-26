@@ -72,13 +72,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
+        //if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
         if (Input.GetKeyDown(KeyCode.X))//jump)
         {
             if (x >= 1)
             {
                 rb2d.AddForce(Vector2.up * jumpPower);
-                x--;
                 //jump = true;
             }
         }
@@ -101,9 +100,21 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
-
- //   void OnColliderEnter2D(Collider2D col)
     
+/*
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Ground"))
+        {
+            if (x < 1)//１　or　０
+            {
+                x++;
+            }
+            //jump = false;
+        }
+    }
+    */
+
     //void OnTriggerEnter2D(Collider2D col)
     //{
     //    if (col.gameObject.tag==("Ground"))//.gameObject.CompareTag("Ground"))
@@ -120,9 +131,9 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     //    }
     //}
 
-    void OnTriggerEnter2D(Collider2D damage)
+    void OnTriggerStay2D(Collider2D other)
     {
-        if (damage.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
             {
@@ -139,7 +150,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
 
-        if (damage.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground"))
         {
             x = 1;
         }
