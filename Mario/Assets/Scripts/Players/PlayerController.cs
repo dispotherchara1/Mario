@@ -72,11 +72,14 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X))// && x >= 1)//jump)
+        if (Input.GetKeyDown(KeyCode.X))//jump)
         {
-            rb2d.AddForce(Vector2.up * jumpPower);
-            x--;
-            //jump = true;
+            if (x >= 1)
+            {
+                rb2d.AddForce(Vector2.up * jumpPower);
+                x--;
+                //jump = true;
+            }
         }
     }    
 
@@ -98,7 +101,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
     
-    /*
     void OnTriggerEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -109,7 +111,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
             //jump = false;
         }
-    }*/
+    }
 
     void OnTriggerEnter2D(Collider2D damage)
     {
