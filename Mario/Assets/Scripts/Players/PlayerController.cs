@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public float speed = 5.0f;
     float direction = 0.0f;
     float invincibleTime = 0.0f;//無敵状態
-    int x = 0; 
+    public int x = 0; 
 
     enum AttackType//攻撃パターン(まだ使ってません)
     {
@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X))// && x >= 1)//jump)
+        if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
         {
             rb2d.AddForce(Vector2.up * jumpPower);
             x--;
@@ -97,11 +97,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
-    
-    /*
-    void OnTriggerEnter2D(Collision2D other)
+
+
+    void OnColliderEnter2D(Collision2D col)
     {
-        if (other.gameObject.CompareTag("Ground"))
+        if (col.gameObject.tag==("Ground"))//.gameObject.CompareTag("Ground"))
         {
             if (x < 1)//１　or　０
             {
@@ -109,7 +109,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
             //jump = false;
         }
-    }*/
+        else
+        {
+            x = 0;
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D damage)
     {
