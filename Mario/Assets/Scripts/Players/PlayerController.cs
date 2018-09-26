@@ -72,11 +72,18 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
+<<<<<<< HEAD
         if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
+=======
+        if (Input.GetKeyDown(KeyCode.X))//jump)
+>>>>>>> origin/Honjo
         {
-            rb2d.AddForce(Vector2.up * jumpPower);
-            x--;
-            //jump = true;
+            if (x >= 1)
+            {
+                rb2d.AddForce(Vector2.up * jumpPower);
+                x--;
+                //jump = true;
+            }
         }
     }    
 
@@ -97,9 +104,14 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
+<<<<<<< HEAD
 
 
     void OnColliderEnter2D(Collision2D col)
+=======
+    
+    void OnTriggerEnter2D(Collision2D other)
+>>>>>>> origin/Honjo
     {
         if (col.gameObject.tag==("Ground"))//.gameObject.CompareTag("Ground"))
         {
@@ -109,10 +121,13 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
             //jump = false;
         }
+<<<<<<< HEAD
         else
         {
             x = 0;
         }
+=======
+>>>>>>> origin/Honjo
     }
 
     void OnTriggerEnter2D(Collider2D damage)
