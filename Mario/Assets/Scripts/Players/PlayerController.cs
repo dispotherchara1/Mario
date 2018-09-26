@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
         //ジャンプ判定
-        if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
+        if (Input.GetKeyDown(KeyCode.X))// && x >= 1)//jump)
         {
             rb2d.AddForce(Vector2.up * jumpPower);
             x--;
@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
     }
     
+    /*
     void OnTriggerEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Ground"))
@@ -108,9 +109,9 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
             //jump = false;
         }
-    }
+    }*/
 
-    void OnTriggerStay2D(Collider2D damage)
+    void OnTriggerEnter2D(Collider2D damage)
     {
         if (damage.gameObject.CompareTag("Enemy"))
         {
@@ -129,133 +130,5 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
+
 }
-/*
-enum StateType
-{
-    NORMAL, TENSHINHAN, RAMEN
-};
-StateType stateType;
-
-void SetTenshinhan()
-{
-    if (stateType < StateType.TENSHINHAN)
-    {
-        Debug.Log("天津飯");
-        stateType = StateType.TENSHINHAN;
-    }
-    else
-    {
-        Debug.Log("天津飯を食べれません");
-    }
-}
-
-void SetRamen()
-{
-    Debug.Log("ラーメン");
-    stateType = StateType.RAMEN;
-}
-*/
-
-/*
-// Update is called once per frame
-void Start()
-{
-    //コンポーネント読み込み
-    rb2d = GetComponent<Rigidbody2D>();
-    stateType = StateType.NORMAL;
-}
-*/
-
-/*
-// Update is called once per frame
-void Update()
-{
-    Operation();
-    Attack();
-    StateNow();
-}
-*/
-
-/*
-void Attack()
-{
-    switch (stateType)//状態を確認
-    {
-        case StateType.NORMAL:
-            if (Input.GetKeyDown(KeyCode.Z))//パンチ
-            {
-                //未定(モーション)           
-                Debug.Log("パンチ");
-            }
-            break;
-
-        case StateType.TENSHINHAN:
-            if (Input.GetKeyDown(KeyCode.Z))//パンチ
-            {
-                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
-                {
-                    //未定(モーション)
-                    Debug.Log("昇竜拳");
-                }
-                else
-                {
-                    //未定(モーション)
-                    Debug.Log("パンチ");
-                }
-            }
-            break;
-
-        case StateType.RAMEN:
-            if (Input.GetKeyDown(KeyCode.Z))//パンチ
-            {
-                if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
-                {
-                    //未定(モーション)
-                    Debug.Log("昇竜拳");
-                }
-                else
-                {
-                    //未定(モーション)
-                    Debug.Log("パンチ");
-                }
-            }
-            if (Input.GetKeyDown(KeyCode.Space))//波動拳
-            {
-                //未定(モーション)
-                Debug.Log("波動拳");
-            }
-            break;
-    }
-}
-*/
-
-/*
-public class PlayerController : MonoBehaviour
-{
-    float x = 3.0f;//xの移動量
-    float y = 3.0f;//yの移動量(ジャンプ)
-    Vector2 pos = new Vector2(0.0f, 0.0f);
-    // Use this for initialization
-    void Start()
-    {
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
-        {
-            pos.x -= x * Time.deltaTime;
-        }
-        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
-        {
-            pos.x += x * Time.deltaTime;
-        }
-        if(Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
-        {
-            pos.y += y;
-        }
-        this.gameObject.transform.position = pos.normalized;
-    }
-}*/
