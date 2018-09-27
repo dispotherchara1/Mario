@@ -77,8 +77,8 @@ public class State : MonoBehaviour
                 //this.transform.localScale = new Vector3(1, 1, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
-                    //(モーション)           
-                    playerController.SetAnimator();
+                    //モーション
+                    playerController.SetAnimator1();
                     Debug.Log("パンチ");
                 }
                 break;
@@ -91,12 +91,14 @@ public class State : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
                     {
+                        //モーション
+                        playerController.SetAnimator2();
                         Debug.Log("昇竜拳");
                     }
                     else
                     {
                         //モーション
-                        playerController.SetAnimator();
+                        playerController.SetAnimator1();
                         Debug.Log("パンチ");
                     }
                 }
@@ -110,13 +112,14 @@ public class State : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
                     {
-                        //未定(モーション)
+                        //モーション
+                        playerController.SetAnimator2();
                         Debug.Log("昇竜拳");
                     }
                     else
                     {
-                        //(モーション)
-                        playerController.SetAnimator();
+                        //モーション
+                        playerController.SetAnimator1();
                         Debug.Log("パンチ");
                     }
                 }
@@ -125,7 +128,7 @@ public class State : MonoBehaviour
                     if(timeInterval < time)
                     {
                         //モーション
-                        playerController.SetAnimator();
+                        playerController.SetAnimator1();
                         Instantiate(hadoken);
                         time = 0.0f;
                         Debug.Log("波動拳");
