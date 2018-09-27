@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public GameOver gameOver;
     Rigidbody2D rb2d;
     Renderer renderComponent;
+    Animator animator;
     //変数定義
     //bool jump = true;
     bool invincible = false;//無敵
@@ -35,6 +36,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         rb2d = GetComponent<Rigidbody2D>();
         state.SetNormal();
         renderComponent = GetComponent<Renderer>();
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -71,8 +73,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         //キャラのy軸のdirection方向にspeedの力をかける
         rb2d.velocity = new Vector2(speed * direction, rb2d.velocity.y);
 
+        if(direction != 0)
+        {
+            transform.localScale = new Vector3(direction * 2, 2, 2);
+        }
+        
         //ジャンプ判定
-        //if (Input.GetKeyDown(KeyCode.X) && x >= 1)//jump)
         if (Input.GetKeyDown(KeyCode.X))//jump)
         {
             if (x >= 1)
@@ -80,6 +86,15 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 rb2d.AddForce(Vector2.up * jumpPower);
                 //jump = true;
             }
+        }
+
+        if (direction != 0)
+        {
+            animator.speed = speed / 2;
+        }
+        else
+        {
+            animator.speed = 0;
         }
     }    
 
