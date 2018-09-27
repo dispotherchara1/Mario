@@ -8,11 +8,7 @@ public class EnemyDeath : MonoBehaviour {
 	void Start () {
         _pearent = transform.root.gameObject;
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.tag == "Player")

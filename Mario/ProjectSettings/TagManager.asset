@@ -9,6 +9,7 @@ TagManager:
   - Enemydamage
   - Ground
   - Items
+  - hadoken
   layers:
   - Default
   - TransparentFX
@@ -51,4 +52,7 @@ TagManager:
     locked: 0
   - name: player
     uniqueID: 2033059731
+    locked: 0
+  - name: PlayersItem
+    uniqueID: 3152582153
     locked: 0
