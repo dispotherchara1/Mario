@@ -5,14 +5,16 @@ using UnityEngine;
 public class Hadoken : MonoBehaviour
 {
     GameObject player;
+    PlayerController playerController;
     float time = 0.0f;
     float timeInterval = 0.5f;
+    //Vector3 Set = new Vector2(1.0f, 0.0f);
 
     void Start()
     {
-        player = GameObject.Find("player");
-        Transform playerTransform = GameObject.Find("Player").transform;
-        transform.position = playerTransform.position;
+        player = GameObject.Find("China_C");
+        Transform playerTransform = GameObject.Find("China_C").transform;
+        transform.position = playerTransform.position;// + Set;
     }
     
     void Update()
@@ -31,7 +33,7 @@ public class Hadoken : MonoBehaviour
     {
         if (!col.gameObject.CompareTag("Items"))
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
             Debug.Log("物に当たりました");
         }
         else

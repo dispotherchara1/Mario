@@ -28,10 +28,15 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     {
         return invincible;
     }
-
-    public void SetAnimator()
+    
+    public void SetAnimator1()
     {
-        animator.SetTrigger("AttackTrigger");
+        animator.SetTrigger("AttackTrigger1");
+    }
+
+    public void SetAnimator2()
+    {
+        animator.SetTrigger("AttackTrigger2");
     }
 
     // Use this for initialization
@@ -93,7 +98,8 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
                 
-        if (direction != 0 || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
+        if (direction != 0 || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") ||
+            animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
             animator.speed = speed / 2;
         }
