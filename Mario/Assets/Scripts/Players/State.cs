@@ -4,6 +4,7 @@ using UnityEngine;
 public class State : MonoBehaviour
 {
     GameObject hadoken;
+    public PlayerController playerController;
     bool boushiLook = false;
     bool gloveLook = false;
     float time = 0.0f;
@@ -76,7 +77,8 @@ public class State : MonoBehaviour
                 //this.transform.localScale = new Vector3(1, 1, 1);
                 if (Input.GetKeyDown(KeyCode.Z))//パンチ
                 {
-                    //未定(モーション)           
+                    //(モーション)           
+                    playerController.SetAnimator();
                     Debug.Log("パンチ");
                 }
                 break;
@@ -89,12 +91,12 @@ public class State : MonoBehaviour
                 {
                     if (Input.GetKey(KeyCode.UpArrow) || Input.GetKey(KeyCode.W))//昇竜拳
                     {
-                        //未定(モーション)
                         Debug.Log("昇竜拳");
                     }
                     else
                     {
-                        //未定(モーション)
+                        //モーション
+                        playerController.SetAnimator();
                         Debug.Log("パンチ");
                     }
                 }
@@ -113,7 +115,8 @@ public class State : MonoBehaviour
                     }
                     else
                     {
-                        //未定(モーション)
+                        //(モーション)
+                        playerController.SetAnimator();
                         Debug.Log("パンチ");
                     }
                 }
@@ -121,7 +124,8 @@ public class State : MonoBehaviour
                 {     
                     if(timeInterval < time)
                     {
-                        //未定(モーション)  
+                        //モーション
+                        playerController.SetAnimator();
                         Instantiate(hadoken);
                         time = 0.0f;
                         Debug.Log("波動拳");

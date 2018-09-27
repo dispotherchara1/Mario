@@ -135,6 +135,7 @@ AnimatorStateMachine:
   m_StateMachineTransitions: {}
   m_StateMachineBehaviours: []
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
+<<<<<<< HEAD
 <<<<<<< HEAD:Mario/Assets/ChnesePic/Anime/China_C.controller
   m_EntryPosition: {x: 50, y: 120, z: 0}
   m_ExitPosition: {x: 36, y: 228, z: 0}
@@ -142,5 +143,14 @@ AnimatorStateMachine:
   m_EntryPosition: {x: 48, y: 120, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
 >>>>>>> origin/Honjo:Mario/Assets/ChnesePic/China_C.controller
+=======
+<<<<<<< HEAD:Mario/Assets/ChnesePic/China_C.controller
+  m_EntryPosition: {x: 48, y: 120, z: 0}
+  m_ExitPosition: {x: 800, y: 120, z: 0}
+=======
+  m_EntryPosition: {x: 50, y: 120, z: 0}
+  m_ExitPosition: {x: 36, y: 228, z: 0}
+>>>>>>> origin/Yamamoto:Mario/Assets/ChnesePic/Anime/China_C.controller
+>>>>>>> origin/Honjo
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 1102436216453183200}
