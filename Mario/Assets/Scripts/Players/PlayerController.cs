@@ -29,6 +29,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         return invincible;
     }
 
+    public void SetAnimator()
+    {
+        animator.SetTrigger("AttackTrigger");
+    }
+
     // Use this for initialization
     void Start()
     {
@@ -87,8 +92,8 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 //jump = true;
             }
         }
-
-        if (direction != 0)
+                
+        if (direction != 0 || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack"))
         {
             animator.speed = speed / 2;
         }
