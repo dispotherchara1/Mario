@@ -9,6 +9,7 @@ public class Hadoken : MonoBehaviour
     float time = 0.0f;
     float timeInterval = 0.5f;
     //Vector3 Set = new Vector2(1.0f, 0.0f);
+    PlayerController PleCon;
 
     void Start()
     {
@@ -20,12 +21,13 @@ public class Hadoken : MonoBehaviour
     void Update()
     {
         float speed = 10.0f;
-        GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
-        time += Time.deltaTime;
+        GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
+        /*time += Time.deltaTime;
         if (time > timeInterval)
         {
             Destroy(gameObject);    // 自分自身を削除
-        }
+        }*/
+        Destroy(gameObject, 0.7f);
     }
 
 

@@ -182,5 +182,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         }
         else { x = 0; }
     }
-
+   /* /// <summary>
+    /// DirectionをHadokenに見せるためのメソッド
+    /// </summary>
+    /// <returns></returns>
+    public float lookDirection()
+    {
+        return direction;
+    }*/
 }

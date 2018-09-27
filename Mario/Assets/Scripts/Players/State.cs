@@ -9,6 +9,8 @@ public class State : MonoBehaviour
     bool gloveLook = false;
     float time = 0.0f;
     float timeInterval = 1.0f;
+    //PlayerController Plecon;
+    //int LorR = 1;//右か左かをhadokenに教える
 
     void Start()
     {   // プレハブをスクリプトのみで取得
@@ -156,6 +158,5 @@ public class State : MonoBehaviour
             gameOver.SetGameOver();
             Debug.Log("ゲームオーバー");
         }
-    }
-    */
+    }*/
 }
