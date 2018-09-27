@@ -20,7 +20,7 @@ public class CarryonCamera : MonoBehaviour {
         transform.position = Vector3.Lerp(
             transform.position,
             targetCamPos,
-            Time.deltaTime * smoothing
+            Time.deltaTime * smoothing//+=Time.deltaTime)
         );
 
     }
