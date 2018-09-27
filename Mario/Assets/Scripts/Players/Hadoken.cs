@@ -14,6 +14,7 @@ public class Hadoken : MonoBehaviour
     void Start()
     {
         player = GameObject.Find("China_C");
+        playerController = player.GetComponent<PlayerController>();
         Transform playerTransform = GameObject.Find("China_C").transform;
         transform.position = playerTransform.position;// + Set;
     }
@@ -23,6 +24,16 @@ public class Hadoken : MonoBehaviour
         float speed = 10.0f;
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
         /*time += Time.deltaTime;
+        if (playerController.GetForward())
+        {
+            GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
+        }
+        else
+        {
+            GetComponent<Rigidbody2D>().velocity = - transform.right.normalized * speed;
+            transform.localScale = new Vector3(-3, 3, 3);
+        }
+        time += Time.deltaTime;
         if (time > timeInterval)
         {
             Destroy(gameObject);    // 自分自身を削除

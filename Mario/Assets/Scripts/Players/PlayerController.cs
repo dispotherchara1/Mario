@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     //変数定義
     //bool jump = true;
     bool invincible = false;//無敵
+    bool forward = true;//正面
     public float jumpPower = 300.0f;
     public float speed = 5.0f;
     float direction = 0.0f;
@@ -23,6 +24,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         PANCHI, SYORYUKEN, HADOKEN
     };
     AttackType attacktype;
+
+    public bool GetForward()
+    {
+        return forward;
+    }
     
     public bool GetInvincible()
     {
@@ -70,10 +76,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
         {
             direction = 1.0f;
+            forward = true;
         }
         else if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
         {
             direction = -1.0f;
+            forward = false;
         }
         else
         {
