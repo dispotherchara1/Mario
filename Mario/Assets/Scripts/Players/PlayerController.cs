@@ -184,6 +184,12 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
 
+        if (other.gameObject.CompareTag("die"))
+        {
+            gameOver.SetGameOver();
+            Debug.Log("即死です。");
+        }
+
         if (other.gameObject.CompareTag("Ground"))
         {
             x = 1;
