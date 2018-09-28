@@ -764,7 +764,7 @@ GameObject:
   - component: {fileID: 783860610}
   m_Layer: 0
   m_Name: shoryuken
-  m_TagString: panchi
+  m_TagString: shoryuken
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 783860607}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27dda72ccef4c024dbb21a9f87f84bc9, type: 3}
   m_Name: 
@@ -4869,6 +4869,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ffe754aac8d20478586874f95316fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Damage: {fileID: 0}
   blinker: {fileID: 1076429895}
   state: {fileID: 1076429894}
   gameOver: {fileID: 1384494831}
@@ -4995,7 +4996,7 @@ GameObject:
   - component: {fileID: 1247798746}
   m_Layer: 0
   m_Name: Panchi
-  m_TagString: Untagged
+  m_TagString: panchi
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5044,7 +5045,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1247798743}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 27be4aa4d0e1a2641be8697991c92edb, type: 3}
   m_Name: 

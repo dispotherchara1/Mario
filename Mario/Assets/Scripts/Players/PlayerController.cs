@@ -172,7 +172,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (Damage.gameObject.CompareTag("Enemy"))
+        if (other.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
             {
