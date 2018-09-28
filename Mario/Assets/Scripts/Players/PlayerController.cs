@@ -19,13 +19,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     float direction = 0.0f;
     float invincibleTime = 0.0f;//無敵状態
     public int x = 0; 
-
-    enum AttackType//攻撃パターン(まだ使ってません)
-    {
-        PANCHI, SYORYUKEN, HADOKEN
-    };
-    AttackType attacktype;
-
+    
     public bool GetForward()
     {
         return forward;
@@ -49,9 +43,9 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     // Use this for initialization
     void Start()
     {
+        state.SetNormal();
         //コンポーネント読み込み
         rb2d = GetComponent<Rigidbody2D>();
-        state.SetNormal();
         renderComponent = GetComponent<Renderer>();
         animator = GetComponent<Animator>();
     }
@@ -64,10 +58,6 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             Operation();
             state.SetAttack();
             StateNow();
-        }
-        else
-        {
-            Debug.Log("ゲームオーバー");
         }
     }
 
@@ -135,20 +125,20 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
     }
-    
-/*
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
+
+    /*
+        void OnCollisionEnter2D(Collision2D other)
         {
-            if (x < 1)//１　or　０
+            if (other.gameObject.CompareTag("Ground"))
             {
-                x++;
+                if (x < 1)//１　or　０
+                {
+                    x++;
+                }
+                //jump = false;
             }
-            //jump = false;
         }
-    }
-    */
+        */
 
     //void OnTriggerEnter2D(Collider2D col)
     //{
@@ -166,18 +156,18 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     //    }
     //}
 
-        /// <summary>
-        /// PCのダメージ処理だよ
-        /// </summary>
-        /// <param name="other"></param>
+    /// <summary>
+    /// PCのダメージ処理だよ
+    /// </summary>
+    /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
             {
-                if(state.GetStateInt() > 0)
-                { 
+                if (state.GetStateInt() > 0)
+                {
                     invincible = true;
                     state.GetDamage();
                 }
