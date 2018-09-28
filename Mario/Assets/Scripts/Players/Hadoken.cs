@@ -7,8 +7,8 @@ public class Hadoken : MonoBehaviour
     GameObject player;
     PlayerController playerController;
     bool forward = false;
-    float time = 0.0f;
-    float timeInterval = 0.5f;
+    //float time = 0.0f;
+    //float timeInterval = 0.5f;
     //Vector3 Set = new Vector2(1.0f, 0.0f);
 
     void Start()
@@ -24,7 +24,7 @@ public class Hadoken : MonoBehaviour
     {
         float speed = 10.0f;
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
-        time += Time.deltaTime;
+        //time += Time.deltaTime;
         if (forward)
         {
             GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
@@ -34,7 +34,7 @@ public class Hadoken : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = - transform.right.normalized * speed;
             transform.localScale = new Vector3(-3, 3, 3);
         }
-        time += Time.deltaTime;
+        //time += Time.deltaTime;
         Destroy(gameObject, 0.75f);
         /*if (time > timeInterval)
         {
