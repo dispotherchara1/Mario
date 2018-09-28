@@ -13,6 +13,7 @@ TagManager:
   - panchi
   - die
   - shoryuken
+  - VSBoss
   layers:
   - Default
   - TransparentFX
