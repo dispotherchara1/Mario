@@ -14,7 +14,7 @@ public class Shoryuken : MonoBehaviour
         player = GameObject.Find("China_C");
         animator = player.GetComponent<Animator>();
         ShoryukenCollider2d = GetComponent<Collider2D>();
-        ShoryukenCollider2d.isTrigger = false;
+        ShoryukenCollider2d.enabled = false;
     }
 
     // Update is called once per frame
@@ -22,12 +22,12 @@ public class Shoryuken : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
-            ShoryukenCollider2d.isTrigger = true;
+            ShoryukenCollider2d.enabled = true;
         }
         else
         {
-            ShoryukenCollider2d.isTrigger = false;
+            ShoryukenCollider2d.enabled = false;
         }
-        Debug.Log("昇竜拳" + ShoryukenCollider2d.isTrigger);
+        Debug.Log("昇竜拳" + ShoryukenCollider2d.enabled);
     }
 }

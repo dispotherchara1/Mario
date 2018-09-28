@@ -12,6 +12,7 @@ TagManager:
   - hadoken
   - panchi
   - die
+  - shoryuken
   layers:
   - Default
   - TransparentFX

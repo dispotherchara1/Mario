@@ -14,7 +14,7 @@ public class Panchi : MonoBehaviour
         player = GameObject.Find("China_C");
         animator = player.GetComponent<Animator>();
         panchiCollider2d = GetComponent<Collider2D>();
-        panchiCollider2d.isTrigger = false;
+        panchiCollider2d.enabled = false;
 	}
 	
 	// Update is called once per frame
@@ -22,12 +22,12 @@ public class Panchi : MonoBehaviour
     {
         if (animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1"))
         {
-            panchiCollider2d.isTrigger = true;
+            panchiCollider2d.enabled = true;
         }
         else
         {
-            panchiCollider2d.isTrigger = false;
+            panchiCollider2d.enabled = false;
         }
-        Debug.Log("波動拳" + panchiCollider2d.isTrigger);
+        Debug.Log("波動拳" + panchiCollider2d.enabled);
 	}
 }

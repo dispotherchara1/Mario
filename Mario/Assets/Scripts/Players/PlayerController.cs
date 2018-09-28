@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
+    public Collider2D Damage;
     public Blinker blinker;
     public State state;
     public GameOver gameOver;
@@ -165,7 +166,11 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     //    }
     //}
 
-    void OnTriggerStay2D(Collider2D other)
+        /// <summary>
+        /// PCのダメージ処理だよ
+        /// </summary>
+        /// <param name="other"></param>
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Enemy"))
         {
@@ -190,18 +195,17 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             Debug.Log("即死です。");
         }
 
+    }
+    /// <summary>
+    /// ジャンプしていいか考えるメソッドだよ
+    /// </summary>
+    /// <param name="other"></param>
+    void OnTriggerStay2D(Collider2D other)
+    {
         if (other.gameObject.CompareTag("Ground"))
         {
             x = 1;
         }
         else { x = 0; }
     }
-   /* /// <summary>
-    /// DirectionをHadokenに見せるためのメソッド
-    /// </summary>
-    /// <returns></returns>
-    public float lookDirection()
-    {
-        return direction;
-    }*/
 }
