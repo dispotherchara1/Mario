@@ -42,13 +42,13 @@ public class slime : MonoBehaviour
         }
     }
 
-    void OnColliderEnter2D(Collider2D col)
-    {
-        if (col.gameObject.name != "Player")
-        {
-            a = a * -1;
-        }
-    }
+    //void OnColliderEnter2D(Collider2D col)
+    //{
+    //    if (col.gameObject.name != "Player")
+    //    {
+    //        a = a * -1;
+    //    }
+    //}
     //public void Turn() {
     //    //dir = dir * -1;
     //    a = a * -1;
