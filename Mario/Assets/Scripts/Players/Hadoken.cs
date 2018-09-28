@@ -23,7 +23,7 @@ public class Hadoken : MonoBehaviour
     {
         float speed = 10.0f;
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
-        /*time += Time.deltaTime;
+        time += Time.deltaTime;
         if (playerController.GetForward())
         {
             GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
@@ -34,11 +34,12 @@ public class Hadoken : MonoBehaviour
             transform.localScale = new Vector3(-3, 3, 3);
         }
         time += Time.deltaTime;
-        if (time > timeInterval)
+        Destroy(gameObject, 0.75f);
+        /*if (time > timeInterval)
         {
             Destroy(gameObject);    // 自分自身を削除
         }*/
-        Destroy(gameObject, 0.7f);
+        //Destroy(gameObject, 0.7f);
     }
 
 
