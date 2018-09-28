@@ -106,9 +106,9 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                 //jump = true;
             }
         }
-                
-        if (direction != 0 || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") ||
-            animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
+
+        if (direction != 0 || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack1") 
+                           || animator.GetCurrentAnimatorStateInfo(0).IsTag("Attack2"))
         {
             animator.speed = speed / 2;
         }
@@ -116,7 +116,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
         {
             animator.speed = 0;
         }
-    }    
+    }
 
     void StateNow()
     {
