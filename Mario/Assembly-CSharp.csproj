@@ -53,9 +53,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\hadokenDeath.cs" />
      <Compile Include="Assets\Scripts\CarryonCamera.cs" />
-     <Compile Include="Assets\Scripts\EnemyDeath.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyDeath.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemysAttackFireAfterFire.cs" />
+     <Compile Include="Assets\Scripts\Enemy\hadokenDeath.cs" />
+     <Compile Include="Assets\Scripts\Enemy\slime.cs" />
+     <Compile Include="Assets\Scripts\Enemy\Taiho.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Items\FriedRice.cs" />
      <Compile Include="Assets\Scripts\Items\Ramen.cs" />
@@ -64,9 +67,10 @@
      <Compile Include="Assets\Scripts\Players\Boushi.cs" />
      <Compile Include="Assets\Scripts\Players\Glove.cs" />
      <Compile Include="Assets\Scripts\Players\Hadoken.cs" />
+     <Compile Include="Assets\Scripts\Players\Panchi.cs" />
      <Compile Include="Assets\Scripts\Players\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Players\Shoryuken.cs" />
      <Compile Include="Assets\Scripts\Players\State.cs" />
-     <Compile Include="Assets\Scripts\slime.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />
@@ -106,6 +110,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
      <None Include="Assets\YamamotoBOX\2D or not 2D.txt" />
+     <None Include="Assets\YamamotoBOX\Parade.txt" />
      <None Include="Assets\TextMesh Pro\Examples &amp; Extras\Fonts\Oswald-Bold - OFL.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
