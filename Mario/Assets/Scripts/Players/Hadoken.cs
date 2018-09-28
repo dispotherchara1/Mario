@@ -6,17 +6,18 @@ public class Hadoken : MonoBehaviour
 {
     GameObject player;
     PlayerController playerController;
+    bool forward = false;
     float time = 0.0f;
     float timeInterval = 0.5f;
     //Vector3 Set = new Vector2(1.0f, 0.0f);
-    PlayerController PleCon;
 
     void Start()
     {
         player = GameObject.Find("China_C");
         playerController = player.GetComponent<PlayerController>();
         Transform playerTransform = GameObject.Find("China_C").transform;
-        transform.position = playerTransform.position;// + Set;
+        transform.position = playerTransform.position;
+        forward = playerController.GetForward();
     }
     
     void Update()
@@ -24,7 +25,7 @@ public class Hadoken : MonoBehaviour
         float speed = 10.0f;
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
         time += Time.deltaTime;
-        if (playerController.GetForward())
+        if (forward)
         {
             GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
         }
