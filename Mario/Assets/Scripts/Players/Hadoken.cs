@@ -21,7 +21,7 @@ public class Hadoken : MonoBehaviour
     {
         float speed = 10.0f;
         GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed ;
-        //time += Time.deltaTime;
+
         if (forward)
         {
             GetComponent<Rigidbody2D>().velocity = transform.right.normalized * speed;
@@ -34,7 +34,7 @@ public class Hadoken : MonoBehaviour
         Destroy(gameObject, 0.75f);
     }
 
-
+    /*
     void OnTriggerStay2D(Collider2D col)
     {
         if (!col.gameObject.CompareTag("Enemy"))
@@ -47,4 +47,5 @@ public class Hadoken : MonoBehaviour
             Debug.Log("アイテムに当たりました");
         }
     }
+    */
 }

@@ -28,6 +28,5 @@ public class Panchi : MonoBehaviour
         {
             panchiCollider2d.enabled = false;
         }
-        Debug.Log("波動拳" + panchiCollider2d.enabled);
 	}
 }
