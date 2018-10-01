@@ -321,7 +321,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -10.78, y: -1.302, z: 0}
   m_LocalScale: {x: 5.554, y: 6.1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 2097221849}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -761,7 +762,6 @@ GameObject:
   m_Component:
   - component: {fileID: 783860608}
   - component: {fileID: 783860609}
-  - component: {fileID: 783860610}
   m_Layer: 0
   m_Name: shoryuken
   m_TagString: shoryuken
@@ -807,17 +807,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7036093, y: 1.5680823}
   m_EdgeRadius: 0
---- !u!114 &783860610
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 783860607}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27dda72ccef4c024dbb21a9f87f84bc9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &835140154 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4936717114936044, guid: ca57f104122eaea4c8b2f0d01ce57b02,
@@ -4779,8 +4768,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076429888}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.52, y: -0.04, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.52, y: -0.04000002, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 1180608528}
@@ -4788,7 +4777,7 @@ Transform:
   - {fileID: 1247798744}
   - {fileID: 783860608}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1076429892
 Rigidbody2D:
@@ -4869,7 +4858,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11ffe754aac8d20478586874f95316fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: {fileID: 0}
+  Damage: {fileID: 1076429889}
   blinker: {fileID: 1076429895}
   state: {fileID: 1076429894}
   gameOver: {fileID: 1384494831}
@@ -4993,7 +4982,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1247798744}
   - component: {fileID: 1247798745}
-  - component: {fileID: 1247798746}
   m_Layer: 0
   m_Name: Panchi
   m_TagString: panchi
@@ -5026,7 +5014,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.8528272, y: 0.37535828}
+  m_Offset: {x: 1.3313881, y: 0.37535828}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -5037,19 +5025,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.2591512, y: 0.6704171}
+  m_Size: {x: 2.2162726, y: 0.6704171}
   m_EdgeRadius: 0
---- !u!114 &1247798746
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1247798743}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27be4aa4d0e1a2641be8697991c92edb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1384494827
 GameObject:
   m_ObjectHideFlags: 0
@@ -5143,7 +5120,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1384494831
 MonoBehaviour:
@@ -7567,7 +7544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4245777787593494, guid: 50da52836b531934494d9fea82492540, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50da52836b531934494d9fea82492540, type: 2}
@@ -22189,3 +22166,74 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4936717114936044, guid: ca57f104122eaea4c8b2f0d01ce57b02,
     type: 2}
   m_PrefabInternal: {fileID: 1384518842}
+--- !u!1 &2097221848
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 1241765517369368, guid: 50da52836b531934494d9fea82492540,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2097221849}
+  - component: {fileID: 2097221851}
+  - component: {fileID: 2097221850}
+  m_Layer: 0
+  m_Name: GameObject (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2097221849
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 4788463186061384, guid: 50da52836b531934494d9fea82492540,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097221848}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.7202017, y: 0.6557377, z: 1}
+  m_Children: []
+  m_Father: {fileID: 394764652}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2097221850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 114207687988848402, guid: 50da52836b531934494d9fea82492540,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097221848}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19eb06c76b244d4d9b4c2665a01fcc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 5
+--- !u!61 &2097221851
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 61732951970085282, guid: 50da52836b531934494d9fea82492540,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2097221848}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.032742977, y: 0.030939877}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.6201811, y: 0.65726125}
+  m_EdgeRadius: 0
