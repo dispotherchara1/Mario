@@ -7,9 +7,6 @@ public class Hadoken : MonoBehaviour
     GameObject player;
     PlayerController playerController;
     bool forward = false;
-    //float time = 0.0f;
-    //float timeInterval = 0.5f;
-    //Vector3 Set = new Vector2(1.0f, 0.0f);
 
     void Start()
     {
@@ -32,23 +29,17 @@ public class Hadoken : MonoBehaviour
         else
         {
             GetComponent<Rigidbody2D>().velocity = - transform.right.normalized * speed;
-            transform.localScale = new Vector3(-3, 3, 3);
+            transform.localScale = new Vector3(-3, 3, 1);
         }
-        //time += Time.deltaTime;
         Destroy(gameObject, 0.75f);
-        /*if (time > timeInterval)
-        {
-            Destroy(gameObject);    // 自分自身を削除
-        }*/
-        //Destroy(gameObject, 0.7f);
     }
 
 
     void OnTriggerStay2D(Collider2D col)
     {
-        if (!col.gameObject.CompareTag("Items"))
+        if (!col.gameObject.CompareTag("Enemy"))
         {
-            //Destroy(gameObject);
+            Destroy(gameObject);
             Debug.Log("物に当たりました");
         }
         else

@@ -61,6 +61,7 @@
      <Compile Include="Assets\Scripts\Enemy\Taiho.cs" />
      <Compile Include="Assets\Scripts\GameOver.cs" />
      <Compile Include="Assets\Scripts\Items\FriedRice.cs" />
+     <Compile Include="Assets\Scripts\Items\ItemBrock.cs" />
      <Compile Include="Assets\Scripts\Items\Ramen.cs" />
      <Compile Include="Assets\Scripts\Items\TianjinMeal.cs" />
      <Compile Include="Assets\Scripts\Players\Blinker.cs" />
