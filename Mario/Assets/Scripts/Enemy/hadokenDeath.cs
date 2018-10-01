@@ -22,7 +22,7 @@ public class hadokenDeath : MonoBehaviour {
     private void Update()
     {
         if (HP<=0) {
-            Destroy(_pearent);
+            Destroy(gameObject);//_pearent);
         }
     }
 
