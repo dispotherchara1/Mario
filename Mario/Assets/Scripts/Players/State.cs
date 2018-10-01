@@ -141,6 +141,7 @@ public class State : MonoBehaviour
                     }
                     else
                     {
+                       
                         Debug.Log("クールタイム");
                     }
                 }

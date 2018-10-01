@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
-    public Collider2D Damage;
+    //public Collider2D Damage;
     public Blinker blinker;
     public State state;
     public GameOver gameOver;
