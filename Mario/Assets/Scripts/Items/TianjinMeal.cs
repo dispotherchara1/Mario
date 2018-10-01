@@ -4,8 +4,14 @@ using UnityEngine;
 
 public class TianjinMeal : MonoBehaviour
 {
-    public State state;
-    //public PlayerController playerController;
+    GameObject player;
+    State state;
+
+    void Start()
+    {
+        player = GameObject.Find("China_C");
+        state = player.GetComponent<State>();
+    }
     private void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Player")

@@ -13,7 +13,11 @@ TagManager:
   - panchi
   - die
   - shoryuken
+<<<<<<< HEAD
   - VSBoss
+=======
+  - ItemBlock
+>>>>>>> origin/Honjo
   layers:
   - Default
   - TransparentFX

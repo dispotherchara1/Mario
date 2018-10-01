@@ -9,9 +9,12 @@ public class State : MonoBehaviour
     bool gloveLook = false;
     float time = 0.0f;
     float timeInterval = 1.0f;
+<<<<<<< HEAD
     //PlayerController Plecon;
     //public Collider2D Panchi,Shoruken ;
 
+=======
+>>>>>>> origin/Honjo
 
     void Start()
     {   // プレハブをスクリプトのみで取得
