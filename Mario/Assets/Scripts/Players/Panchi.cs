@@ -28,9 +28,8 @@ public class Panchi : MonoBehaviour
         {
             panchiCollider2d.enabled = false;
         }
-<<<<<<< HEAD
+
         //Debug.Log("波動拳" + panchiCollider2d.enabled);
-=======
->>>>>>> origin/Honjo
+
 	}
 }

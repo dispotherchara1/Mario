@@ -2,6 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+/// <summary>
+/// 点滅させたいものに付ける
+/// このスクリプトは使いまわせる
+/// </summary>
 public class Blinker : MonoBehaviour
 {
     float nextTime_P = 0.0f;

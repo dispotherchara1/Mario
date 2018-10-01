@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Boushi : MonoBehaviour
 {
+    public GameDown KO;
+
     public Blinker blinker;
     public PlayerController playerController;
     public State state;

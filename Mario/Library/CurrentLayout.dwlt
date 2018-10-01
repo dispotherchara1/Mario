@@ -13,18 +13,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 204
-    y: 59.333336
-    width: 995
-    height: 588
+    x: 7.3333335
+    y: 50
+    width: 1265
+    height: 663
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 6}
-<<<<<<< HEAD
-  m_MinSize: {x: 950, y: 392}
-=======
   m_MinSize: {x: 950, y: 542}
->>>>>>> origin/Honjo
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -44,19 +40,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 30
-<<<<<<< HEAD
-    width: 995
-    height: 538
-  m_MinSize: {x: 683, y: 342}
-  m_MaxSize: {x: 12008, y: 8042}
-=======
-    width: 1280
-    height: 587
-  m_MinSize: {x: 683, y: 492}
-  m_MaxSize: {x: 14004, y: 14042}
->>>>>>> origin/Honjo
+    width: 1265
+    height: 613
+  m_MinSize: {x: 681, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 45
+  controlID: 49
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -71,12 +60,12 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 718
+    x: 988
     y: 0
     width: 277
-    height: 538
-  m_MinSize: {x: 277, y: 71}
-  m_MaxSize: {x: 4002, y: 4021}
+    height: 613
+  m_MinSize: {x: 275, y: 50}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
@@ -98,19 +87,11 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 202
-    height: 267
+    width: 244
+    height: 342
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 15}
-=======
-    width: 248
-    height: 315
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 16}
->>>>>>> origin/Honjo
   m_Panes:
   - {fileID: 15}
   m_Selected: 0
@@ -130,32 +111,17 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-<<<<<<< HEAD
-    y: 267
-    width: 718
+    y: 342
+    width: 988
     height: 271
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 18}
+  m_MinSize: {x: 232, y: 271}
+  m_MaxSize: {x: 10002, y: 10021}
+  m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
   - {fileID: 18}
-  m_Selected: 1
-  m_LastSelected: 0
-=======
-    y: 315
-    width: 1003
-    height: 272
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 14}
-  m_Panes:
-  - {fileID: 14}
-  - {fileID: 19}
-  - {fileID: 12}
   m_Selected: 0
   m_LastSelected: 1
->>>>>>> origin/Honjo
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -175,8 +141,8 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 995
-    height: 588
+    width: 1265
+    height: 663
   m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &7
@@ -195,7 +161,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 995
+    width: 1265
     height: 30
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -215,8 +181,8 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 568
-    width: 995
+    y: 643
+    width: 1265
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
@@ -238,19 +204,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 718
-    height: 538
-  m_MinSize: {x: 406, y: 342}
-  m_MaxSize: {x: 8006, y: 8042}
-=======
-    width: 1003
-    height: 587
+    width: 988
+    height: 613
   m_MinSize: {x: 406, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
->>>>>>> origin/Honjo
   vertical: 1
-  controlID: 46
+  controlID: 50
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -269,17 +228,12 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-<<<<<<< HEAD
-    width: 718
-    height: 267
-=======
-    width: 1003
-    height: 315
->>>>>>> origin/Honjo
+    width: 988
+    height: 342
   m_MinSize: {x: 406, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 102
+  controlID: 95
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -294,26 +248,19 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 202
+    x: 244
     y: 0
-<<<<<<< HEAD
-    width: 516
-    height: 267
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-=======
-    width: 755
-    height: 315
+    width: 744
+    height: 342
   m_MinSize: {x: 204, y: 221}
   m_MaxSize: {x: 4004, y: 4021}
->>>>>>> origin/Honjo
-  m_ActualView: {fileID: 17}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 12}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -359,17 +306,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 204
-    y: 376
-    width: 716
+    x: 7.3333335
+    y: 441.33334
+    width: 986
     height: 250
-=======
-    x: 0
-    y: 407.33334
-    width: 1001
-    height: 251
->>>>>>> origin/Honjo
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -383,15 +323,10 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-<<<<<<< HEAD
     - Assets/YamamotoBOX/PC
-=======
-    - Assets/Scripts/Players
->>>>>>> origin/Honjo
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-<<<<<<< HEAD
   - Assets/YamamotoBOX/PC
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\user\Desktop\Mario\Mario
@@ -399,35 +334,23 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 75}
-    m_SelectedIDs: c02d0000
-    m_LastClickedID: 11712
-    m_ExpandedIDs: 00000000702a0000762a00009c2a0000022b0000fe2b00000e2c0000602c00001e2e00002c2e0000642e0000d42e0000dc2e0000
-=======
-  - Assets/Scripts/Players
-  m_LastFoldersGridSize: 78
-  m_LastProjectPath: C:\Users\user\Documents\Mario\Mario
-  m_LockTracker:
-    m_IsLocked: 0
-  m_FolderTreeState:
-    scrollPos: {x: 0, y: 105.899994}
-    m_SelectedIDs: 880b0000
-    m_LastClickedID: 2952
-    m_ExpandedIDs: 00000000cc090000d2090000f60900005c0a0000500b0000600b0000aa0b0000620d0000920d0000fe0d0000060e000000ca9a3b
->>>>>>> origin/Honjo
+    m_SelectedIDs: cc2d0000
+    m_LastClickedID: 11724
+    m_ExpandedIDs: 000000007c2a0000822a0000a82a00000e2b00000a2c00001a2c00006c2c00002a2e0000382e0000702e0000e02e0000e82e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Anime
-      m_OriginalName: Anime
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 2986
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 0}
     m_SearchString: 
@@ -441,7 +364,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000702a0000762a00009c2a0000022b0000fe2b00000e2c0000602c00001e2e00002c2e0000642e0000d42e0000dc2e0000
+    m_ExpandedIDs: 000000007c2a0000822a0000a82a00000e2b00000a2c00001a2c00006c2c00002a2e0000382e0000702e0000e02e0000e82e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -468,13 +391,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-<<<<<<< HEAD
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: 
-=======
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: 00000000
->>>>>>> origin/Honjo
+    m_ExpandedInstanceIDs: 
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -521,10 +439,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 924
-    y: 108.66667
+    x: 997.3334
+    y: 99.333336
     width: 275
-    height: 517
+    height: 592
   m_PersistentViewDataDictionary: {fileID: 0}
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
@@ -555,29 +473,16 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 204
-    y: 108.66667
-    width: 200
-    height: 246
+    x: 7.3333335
+    y: 99.333336
+    width: 242
+    height: 321
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
+    scrollPos: {x: 0, y: 32}
+    m_SelectedIDs: 4c340000
     m_LastClickedID: 0
-    m_ExpandedIDs: d0fbffff00000000
-=======
-    x: 0
-    y: 92
-    width: 246
-    height: 294
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 68060000
-    m_LastClickedID: 0
-    m_ExpandedIDs: 2828f8ff444ef9ff6e50f9ff2e52f9ff887af9ffde7af9ff8c7cf9ff4441faff9a41faff2e39fbff303afbff4055fbff0057fbffe0befbff68c0fbffa6d9fbff52e8fbffda0afcff300bfcffe20cfcffca0efcff5c10fcff8411fcff2ea4fcffd0a8fcff1caafcffbebbfcff9cc2fcffaec3fcff40d0fcff4cdbfcffc40effffb023ffff0626ffff8a27ffff1a72ffffd2f4ffffe6fbffff00000000d6300000fa300000ae390000243a0000be3e0000663f0000e83f000024410000fc4100004c44000086440000fe44000008450000964700002c490000d84900005a4a00005a4c0000dc4c0000e24e0000644f00009e5200002053000054540000ca540000065800007c5800008c5a0000025b0000
->>>>>>> origin/Honjo
+    m_ExpandedIDs: 867bffff288cffff66fbffff00000000c82f0000dc2f00007a300000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -596,11 +501,7 @@ MonoBehaviour:
       m_ClientGUIView: {fileID: 4}
     m_SearchString: 
   m_ExpandedScenes:
-<<<<<<< HEAD
   - Yamamoto_test
-=======
-  - Honjo_Test
->>>>>>> origin/Honjo
   m_CurrenRootInstanceID: 0
   m_LockTracker:
     m_IsLocked: 0
@@ -625,33 +526,20 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 250
-    y: 92
-    width: 751
-<<<<<<< HEAD
-    height: 335
+    x: 253.33334
+    y: 99.333336
+    width: 740
+    height: 321
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
   lastFramingTime: 0
-=======
-    height: 294
-  m_PersistentViewDataDictionary: {fileID: 0}
-  m_SceneLighting: 1
-  lastFramingTime: 1600.3703865
->>>>>>> origin/Honjo
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-<<<<<<< HEAD
-    m_Target: {x: -0.15851247, y: 0, z: 0}
+    m_Target: {x: 0.54566747, y: 0.2558208, z: 0.07096355}
     speed: 2
-    m_Value: {x: -0.15851247, y: 0, z: 0}
-=======
-    m_Target: {x: 146.18454, y: 12.258265, z: 0.01953125}
-    speed: 2
-    m_Value: {x: 146.18454, y: 12.258265, z: 0.01953125}
->>>>>>> origin/Honjo
+    m_Value: {x: 0.54566747, y: 0.2558208, z: 0.07096355}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -683,15 +571,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-<<<<<<< HEAD
-    m_Target: 10
+    m_Target: 9.739924
     speed: 2
-    m_Value: 10
-=======
-    m_Target: 28.966381
-    speed: 2
-    m_Value: 28.966381
->>>>>>> origin/Honjo
+    m_Value: 9.739924
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -723,39 +605,25 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 408
-    y: 108.66667
-    width: 512
-    height: 246
-=======
-    x: 250
-    y: 92
-    width: 751
-    height: 294
->>>>>>> origin/Honjo
+    x: 2
+    y: 19
+    width: 740
+    height: 321
   m_PersistentViewDataDictionary: {fileID: 0}
   m_MaximizeOnPlay: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 05000000000000000000000000000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   m_TargetDisplay: 0
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-<<<<<<< HEAD
-    m_HBaseRangeMin: -135.66667
-    m_HBaseRangeMax: 135.66667
-    m_VBaseRangeMin: -76.333336
-    m_VBaseRangeMax: 76.333336
-=======
-    m_HBaseRangeMin: -250.33334
-    m_HBaseRangeMax: 250.33334
-    m_VBaseRangeMin: -92.333336
-    m_VBaseRangeMax: 92.333336
->>>>>>> origin/Honjo
+    m_HBaseRangeMin: -246.66667
+    m_HBaseRangeMax: 246.66667
+    m_VBaseRangeMin: -101.333336
+    m_VBaseRangeMax: 101.333336
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -773,43 +641,25 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 17
-<<<<<<< HEAD
-      width: 512
-      height: 229
-    m_Scale: {x: 1.5, y: 1.5}
-    m_Translation: {x: 256, y: 114.5}
-=======
-      width: 751
-      height: 277
+      width: 740
+      height: 304
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 375.5, y: 138.5}
->>>>>>> origin/Honjo
+    m_Translation: {x: 370, y: 152}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-<<<<<<< HEAD
-      x: -170.66667
-      y: -76.333336
-      width: 341.33334
-      height: 152.66667
-=======
-      x: -375.5
-      y: -138.5
-      width: 751
-      height: 277
->>>>>>> origin/Honjo
+      x: -370
+      y: -152
+      width: 740
+      height: 304
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_TargetTexture: {fileID: 0}
-  m_CurrentColorSpace: 0
-<<<<<<< HEAD
-  m_LastWindowPixelSize: {x: 768, y: 369}
-=======
-  m_LastWindowPixelSize: {x: 1126.5, y: 441}
->>>>>>> origin/Honjo
+  m_CurrentColorSpace: -1
+  m_LastWindowPixelSize: {x: 1110, y: 481.5}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000100
@@ -834,15 +684,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-<<<<<<< HEAD
-    x: 204
-    y: 376
-    width: 716
+    x: 7.3333335
+    y: 441.33334
+    width: 986
     height: 250
-=======
-    x: 0
-    y: 407.33334
-    width: 1001
-    height: 251
->>>>>>> origin/Honjo
   m_PersistentViewDataDictionary: {fileID: 0}

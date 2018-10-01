@@ -28,9 +28,8 @@ public class Shoryuken : MonoBehaviour
         {
             ShoryukenCollider2d.enabled = false;
         }
-<<<<<<< HEAD
+
         //Debug.Log("昇竜拳" + ShoryukenCollider2d.enabled);
-=======
->>>>>>> origin/Honjo
+
     }
 }

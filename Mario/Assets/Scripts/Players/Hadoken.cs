@@ -34,13 +34,9 @@ public class Hadoken : MonoBehaviour
         Destroy(gameObject, 0.75f);
     }
 
-<<<<<<< HEAD
+
 
     /*void OnTriggerStay2D(Collider2D col)
-=======
-    /*
-    void OnTriggerStay2D(Collider2D col)
->>>>>>> origin/Honjo
     {
         if (!col.gameObject.CompareTag("Enemy"))
         {
@@ -51,10 +47,6 @@ public class Hadoken : MonoBehaviour
         {
             Debug.Log("アイテムに当たりました");
         }
-<<<<<<< HEAD
-    }*/
-=======
     }
     */
->>>>>>> origin/Honjo
 }
