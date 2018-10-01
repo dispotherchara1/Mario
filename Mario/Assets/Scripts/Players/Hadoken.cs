@@ -35,7 +35,7 @@ public class Hadoken : MonoBehaviour
     }
 
 
-    void OnTriggerStay2D(Collider2D col)
+    /*void OnTriggerStay2D(Collider2D col)
     {
         if (!col.gameObject.CompareTag("Enemy"))
         {
@@ -46,5 +46,5 @@ public class Hadoken : MonoBehaviour
         {
             Debug.Log("アイテムに当たりました");
         }
-    }
+    }*/
 }

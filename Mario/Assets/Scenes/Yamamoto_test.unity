@@ -465,7 +465,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b7fcd189a40bc045aa1a78f61859ca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  state: {fileID: 1076429894}
 --- !u!58 &565516403
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -8840,8 +8839,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 2033059731
-  m_SortingLayer: 2
+  m_SortingLayerID: -559596397
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a0e5e85de13829a43bef05c684b0e42a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -8923,7 +8922,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1076429888}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47dc81bcbcad29a4a9836b93e3ae5a1c, type: 3}
   m_Name: 
@@ -9191,8 +9190,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: -1142385143
-  m_SortingLayer: 3
+  m_SortingLayerID: -1264935757
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2dc1b7a668af9e847bed73e63bbdc652, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

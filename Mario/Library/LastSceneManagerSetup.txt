@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Yamamoto_test.unity
-=======
-- path: Assets/Scenes/Honjo_Test2.unity
->>>>>>> origin/Honjo
   isLoaded: 1
   isActive: 1
