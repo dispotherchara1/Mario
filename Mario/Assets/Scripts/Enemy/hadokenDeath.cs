@@ -3,12 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class hadokenDeath : MonoBehaviour {
-    private GameObject _pearent;
+    private GameObject _pearent;//_child;
     public int HP =1;
     // Use this for initialization
     void Start()
     {
         _pearent = transform.root.gameObject;
+        /*int count = 0;
+        foreach (Transform child in transform)
+        {
+            //child is your child transform
+
+            //Debug.Log("Child[" + count + "]:" + child.name);
+            count++;
+        }*/
     }
 
     private void Update()

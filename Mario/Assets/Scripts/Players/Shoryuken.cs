@@ -28,6 +28,6 @@ public class Shoryuken : MonoBehaviour
         {
             ShoryukenCollider2d.enabled = false;
         }
-        Debug.Log("昇竜拳" + ShoryukenCollider2d.enabled);
+        //Debug.Log("昇竜拳" + ShoryukenCollider2d.enabled);
     }
 }
