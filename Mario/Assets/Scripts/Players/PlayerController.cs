@@ -162,7 +162,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Enemy"))
+        if (Damage.gameObject.CompareTag("Enemy"))
         {
             if (!invincible)
             {
@@ -179,7 +179,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             }
         }
 
-        if (other.gameObject.CompareTag("die"))
+        if (Damage.gameObject.CompareTag("die"))
         {
             gameOver.SetGameOver();
             Debug.Log("即死です。");
