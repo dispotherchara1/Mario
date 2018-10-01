@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class _GameOver : MonoBehaviour {
 
-
+    int x;
     int PlayerDamage = 0;
     bool gameover = false;
     
@@ -27,7 +27,6 @@ public class _GameOver : MonoBehaviour {
 
         if (col.gameObject.CompareTag("die"))
         {
-            gameOver.SetGameOver();
             Debug.Log("即死です。");
         }
 
