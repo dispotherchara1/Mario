@@ -46,7 +46,7 @@ public class State : MonoBehaviour
     public void GetDamage()
     {
         stateType--;
-        Debug.Log("ダメージを受けました" + stateType);
+        //Debug.Log("ダメージを受けました" + stateType);
     }
 
     public void SetNormal()
@@ -58,18 +58,18 @@ public class State : MonoBehaviour
     {
         if (stateType < StateType.TENSHINHAN)
         {
-            Debug.Log("天津飯");
+            //Debug.Log("天津飯");
             stateType = StateType.TENSHINHAN;
         }
         else
         {
-            Debug.Log("天津飯を食べれません");
+            //Debug.Log("天津飯を食べれません");
         }
     }
 
     public void SetRamen()
     {
-        Debug.Log("ラーメン");
+        //Debug.Log("ラーメン");
         stateType = StateType.RAMEN;
     }
     
@@ -85,7 +85,7 @@ public class State : MonoBehaviour
                 {
                     //モーション
                     playerController.SetAnimator1();
-                    Debug.Log("パンチ");
+                    //Debug.Log("パンチ");
                 }
                 break;
 
@@ -99,13 +99,13 @@ public class State : MonoBehaviour
                     {
                         //モーション
                         playerController.SetAnimator2();
-                        Debug.Log("昇竜拳");
+                        //Debug.Log("昇竜拳");
                     }
                     else
                     {
                         //モーション
                         playerController.SetAnimator1();
-                        Debug.Log("パンチ");
+                        //Debug.Log("パンチ");
                     }
                 }
                 break;
@@ -120,13 +120,13 @@ public class State : MonoBehaviour
                     {
                         //モーション
                         playerController.SetAnimator2();
-                        Debug.Log("昇竜拳");
+                        ////Debug.Log("昇竜拳");
                     }
                     else
                     {
                         //モーション
                         playerController.SetAnimator1();
-                        Debug.Log("パンチ");
+                        //Debug.Log("パンチ");
                     }
                 }
                 if (Input.GetKeyDown(KeyCode.Space))//波動拳
@@ -137,12 +137,12 @@ public class State : MonoBehaviour
                         playerController.SetAnimator1();
                         Instantiate(hadoken);
                         time = 0.0f;
-                        Debug.Log("波動拳");
+                        //Debug.Log("波動拳");
                     }
                     else
                     {
                        
-                        Debug.Log("クールタイム");
+                        //Debug.Log("クールタイム");
                     }
                 }
                 time += Time.deltaTime;

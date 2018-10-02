@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     public Blinker blinker;
     public State state;
     public GameOver gameOver;
+    public GameCrear gamecrear;
     Rigidbody2D rb2d;                //
     Renderer renderComponent;        //
     Animator animator;               //
@@ -53,7 +54,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     // Update is called once per frame
     void Update()
     {
-        if (!gameOver.GetGameOver())
+        if (!gameOver.GetGameOver()&&!gamecrear.reClear())
         {
             Operation();
             state.SetAttack();
@@ -160,7 +161,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     /// PCのダメージ処理だよ
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         //if (col.transform.tag == "Player")
         //{
@@ -176,7 +177,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
                     else
                     {
                         gameOver.SetGameOver();
-                        Debug.Log("ゲームオーバーになりました");
+                        //Debug.Log("ゲームオーバーになりました");
                     }
                 }
             }
@@ -184,7 +185,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
             if (col.gameObject.CompareTag("die"))
             {
                 gameOver.SetGameOver();
-                Debug.Log("即死です。");
+                //Debug.Log("即死です。");
             }
         //}
     }

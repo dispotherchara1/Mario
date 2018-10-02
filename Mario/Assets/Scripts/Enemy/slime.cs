@@ -7,13 +7,13 @@ public class slime : MonoBehaviour
     //Transform mytransform;
     public float a;
     int go =0;
-    private float speed = 0.05f; //移動スピード
+    public float speed = 0.05f; //移動スピード
     private int dir = 1;        //向き（正のとき右）
 
     // Use this for initialization
     void Start()
     {
-        a = 0.01f;
+        //a = 0.01f;
     }
 
     // Update is called once per frame
