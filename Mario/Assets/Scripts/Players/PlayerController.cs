@@ -162,30 +162,33 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     /// <param name="other"></param>
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.CompareTag("Enemy"))
-        {
-            if (!invincible)
+        //if (col.transform.tag == "Player")
+        //{
+            if (col.gameObject.CompareTag("Enemy"))
             {
-                if (state.GetStateInt() > 0)
+                if (!invincible)
                 {
-                    invincible = true;
-                    state.GetDamage();
-                }
-                else
-                {
-                    gameOver.SetGameOver();
-                    Debug.Log("ゲームオーバーになりました");
+                    if (state.GetStateInt() > 0)
+                    {
+                        invincible = true;
+                        state.GetDamage();
+                    }
+                    else
+                    {
+                        gameOver.SetGameOver();
+                        Debug.Log("ゲームオーバーになりました");
+                    }
                 }
             }
-        }
 
-        if (col.gameObject.CompareTag("die"))
-        {
-            gameOver.SetGameOver();
-            Debug.Log("即死です。");
-        }
-
+            if (col.gameObject.CompareTag("die"))
+            {
+                gameOver.SetGameOver();
+                Debug.Log("即死です。");
+            }
+        //}
     }
+
     /// <summary>
     /// ジャンプしていいか考えるメソッドだよ
     /// </summary>
