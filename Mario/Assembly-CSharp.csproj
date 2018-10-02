@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CarryonCamera.cs" />
+     <Compile Include="Assets\Scripts\EndGame.cs" />
      <Compile Include="Assets\Scripts\Enemy\BossOpuna.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyDeath.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemysAttackFireAfterFire.cs" />
@@ -73,6 +74,7 @@
      <Compile Include="Assets\Scripts\Players\PlayerController.cs" />
      <Compile Include="Assets\Scripts\Players\Shoryuken.cs" />
      <Compile Include="Assets\Scripts\Players\State.cs" />
+     <Compile Include="Assets\Scripts\SceneGo.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
      <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark02.cs" />

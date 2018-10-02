@@ -8,11 +8,13 @@ public class GameCrear : MonoBehaviour {
     public Image Clear,Over;
     bool Gameclear = false;
     public GameOver gameover;
+    public Canvas restart;
 
 	// Use this for initialization
 	void Start () {
         Clear.enabled = false;
         Over.enabled = false;
+        restart.enabled = false;
 	}
 
     // Update is called 1/f
@@ -24,6 +26,7 @@ public class GameCrear : MonoBehaviour {
         if (gameover.GetGameOver() == true)
         {
             Over.enabled = true;
+            restart.enabled = true;
         }
 	}
 
@@ -38,6 +41,7 @@ public class GameCrear : MonoBehaviour {
         {
             Clear.enabled = true;
             Gameclear = true;
+            restart.enabled = true;
         }
     }
     /// <summary>

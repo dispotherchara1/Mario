@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GameScene.unity
     guid: c95e2222943665243b3d242941d69f80
+  - enabled: 1
+    path: Assets/Scenes/Yamamoto_test.unity
+    guid: 1a295e26c88aa0f4ab44896a64f9c4c8
   m_configObjects: {}
