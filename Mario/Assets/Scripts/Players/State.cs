@@ -10,9 +10,15 @@ public class State : MonoBehaviour
     float time = 0.0f;
     float timeInterval = 1.0f;
 
+    //PlayerController Plecon;
+    //public Collider2D Panchi,Shoruken ;
+
+
     void Start()
     {   // プレハブをスクリプトのみで取得
         hadoken = (GameObject)Resources.Load("Prefab/hadokenPre");
+        //Panchi.enabled = false;
+        //Shoruken.enabled = false;
     }
 
     enum StateType
@@ -135,6 +141,7 @@ public class State : MonoBehaviour
                     }
                     else
                     {
+                       
                         Debug.Log("クールタイム");
                     }
                 }

@@ -3,20 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 public class PlayerController : MonoBehaviour //こっちは物理演算
 {
-    public Collider2D Damage;
+    //public Collider2D Damage;
     public Blinker blinker;
     public State state;
     public GameOver gameOver;
-    Rigidbody2D rb2d;
-    Renderer renderComponent;
-    Animator animator;
+    Rigidbody2D rb2d;                //
+    Renderer renderComponent;        //
+    Animator animator;               //
     //変数定義
     //bool jump = true;
     bool invincible = false;//無敵
     bool forward = true;//正面
     public float jumpPower = 300.0f;
-    public float speed = 5.0f;
-    float direction = 0.0f;
+    public float speed = 5.0f;       //
+    float direction = 0.0f;          //
     float invincibleTime = 0.0f;//無敵状態
     public int x = 0; 
     
@@ -160,32 +160,35 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     /// PCのダメージ処理だよ
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D col)
     {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            if (!invincible)
+        //if (col.transform.tag == "Player")
+        //{
+            if (col.gameObject.CompareTag("Enemy"))
             {
-                if (state.GetStateInt() > 0)
+                if (!invincible)
                 {
-                    invincible = true;
-                    state.GetDamage();
-                }
-                else
-                {
-                    gameOver.SetGameOver();
-                    Debug.Log("ゲームオーバーになりました");
+                    if (state.GetStateInt() > 0)
+                    {
+                        invincible = true;
+                        state.GetDamage();
+                    }
+                    else
+                    {
+                        gameOver.SetGameOver();
+                        Debug.Log("ゲームオーバーになりました");
+                    }
                 }
             }
-        }
 
-        if (other.gameObject.CompareTag("die"))
-        {
-            gameOver.SetGameOver();
-            Debug.Log("即死です。");
-        }
-
+            if (col.gameObject.CompareTag("die"))
+            {
+                gameOver.SetGameOver();
+                Debug.Log("即死です。");
+            }
+        //}
     }
+
     /// <summary>
     /// ジャンプしていいか考えるメソッドだよ
     /// </summary>

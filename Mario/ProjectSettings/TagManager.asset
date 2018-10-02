@@ -4,16 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - SearchEnemy
-  - Enemy
-  - Enemydamage
-  - Ground
-  - Items
-  - hadoken
-  - panchi
-  - die
   - shoryuken
-  - ItemBlock
+  - Enemy
+  - panchi
+  - VSBoss
+  - SearchEnemy
+  - die
+  - Ground
+  - Undefined
+  - hadoken
   layers:
   - Default
   - TransparentFX
@@ -23,8 +22,8 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
+  - Attack
+  - Enemy
   - 
   - 
   - 
@@ -51,12 +50,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1
+    uniqueID: 2206846071
+    locked: 0
   - name: 2
-    uniqueID: 2271260405
+    uniqueID: 2391738121
     locked: 0
-  - name: player
-    uniqueID: 2033059731
+  - name: Player
+    uniqueID: 3735370899
     locked: 0
-  - name: PlayersItem
-    uniqueID: 3152582153
+  - name: Item
+    uniqueID: 3030031539
     locked: 0

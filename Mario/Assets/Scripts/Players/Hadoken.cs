@@ -34,8 +34,9 @@ public class Hadoken : MonoBehaviour
         Destroy(gameObject, 0.75f);
     }
 
-    /*
-    void OnTriggerStay2D(Collider2D col)
+
+
+    /*void OnTriggerStay2D(Collider2D col)
     {
         if (!col.gameObject.CompareTag("Enemy"))
         {
