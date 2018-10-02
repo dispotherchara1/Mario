@@ -161,7 +161,7 @@ public class PlayerController : MonoBehaviour //こっちは物理演算
     /// PCのダメージ処理だよ
     /// </summary>
     /// <param name="other"></param>
-    void OnTriggerEnter2D(Collider2D col)
+    void OnCollisionEnter2D(Collision2D col)
     {
         //if (col.transform.tag == "Player")
         //{
