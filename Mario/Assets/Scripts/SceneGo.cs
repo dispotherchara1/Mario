@@ -5,10 +5,10 @@ using UnityEngine.SceneManagement;
 public class SceneGo : MonoBehaviour {
     public void StartGame()
     {
-        SceneManager.LoadScene(3);
+        SceneManager.LoadScene(1);
     }
     public void BackTitle()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 }
