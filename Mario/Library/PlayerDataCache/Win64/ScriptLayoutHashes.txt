@@ -1,6 +1,6 @@
 WindowsStandalone
 PlayerPath?
-C:/Users/user/Desktop/Unityexe/Mario.exe
+C:/Users/user/Desktop/中華冒険/Mario.exe
 SceneListBegin?
 Assets/Scenes/TitleScene.unity
 Assets/Scenes/Yamamoto_test.unity
